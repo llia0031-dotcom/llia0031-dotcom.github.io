@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="Cairn: a bilingual WCAG 2.2 knowledge desk on retrieval. Every answer names the success criterion and quotes the W3C text word for word, checked by the server. A case study by Liang Liyuan.">
+  <meta name="description" content="Cairn: a desk that answers from an organisation's own published rules and quotes them word for word, with the server checking every quote. This instance: Monash University's pages for students, by campus, in English and Chinese. A case study by Liang Liyuan.">
   <title data-en="Cairn · Liang Liyuan" data-zh="Cairn · Liang Liyuan">Cairn · Liang Liyuan</title>
   <script>try{if(localStorage.getItem('site-lang')==='zh'){document.documentElement.setAttribute('data-lang','zh');document.documentElement.lang='zh-CN'}}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -33,8 +33,8 @@
     <header class="container case-head">
       <h1>Cairn</h1>
       <p class="lead">
-        <span data-l="en">A knowledge desk for WCAG 2.2. Ask in English or Chinese; the answer names the success criterion and quotes the W3C text word for word, and the server checks every quote against its source before you see it.</span>
-        <span data-l="zh">WCAG 2.2 的知识问答台。用中文或英文提问，回答点名成功标准并逐字引用 W3C 原文；服务器在你看到之前把每条引文和原文核对。</span>
+        <span data-l="en">A desk that answers from an organisation’s own published rules and quotes them word for word. This instance holds Monash University’s pages for students: special consideration, exams, withdrawing, key dates and disability support, for three campuses. You pick your campus, ask in English or Chinese, and the server checks every quote before you see it.</span>
+        <span data-l="zh">根据一个机构自己公开的规定来回答、并逐字引用原文的问答台。这一台装的是 Monash University 的学生页面：特殊考量、考试、退课、关键日期和残障支持，覆盖三个校区。先选校区，用中文或英文提问，服务器在你看到之前核对每条引文。</span>
       </p>
       <ul class="meta" aria-label="Project facts">
         <li class="pill pill--soft">LaunchPad Hacks 2026</li>
@@ -46,13 +46,13 @@
         <a class="btn btn--accent" href="https://jason-d-e.github.io/cairn/" rel="noreferrer"><span data-l="en">Live demo</span><span data-l="zh">在线演示</span></a>
         <a class="btn btn--clear" href="https://github.com/Jason-d-e/cairn" rel="noreferrer"><span data-l="en">Source on GitHub</span><span data-l="zh">GitHub 源码</span></a>
       </div>
-      <p class="small case-note"><span data-l="en">The demo is static: it shows twelve real answers recorded on 9 November 2026 and cannot answer new questions.</span><span data-l="zh">演示是静态版：展示 2026 年 11 月 9 日记录的 12 条真实回答，不能回答新问题。</span></p>
+      <p class="small case-note"><span data-l="en">The demo is static: it shows fourteen real answers recorded on 10 November 2026 and cannot answer new questions. Cairn is unofficial and not affiliated with Monash University.</span><span data-l="zh">演示是静态版：展示 2026 年 11 月 10 日记录的 14 条真实回答，不能回答新问题。Cairn 是非官方项目，与 Monash University 无关。</span></p>
     </header>
 
     <div class="container case-shot">
       <div class="shot clear clear--lead">
-        <img data-l="en" src="assets/cairn/hero-en.jpg" width="1440" height="900" alt="The Cairn cover: the question field on the left, and on the right a real answer card with the figure 24 by 24 CSS pixels marked, the pill 2.5.8 AA Target Size (Minimum), and the W3C sentence it rests on." loading="eager" fetchpriority="high">
-        <img data-l="zh" src="assets/cairn/hero-zh.jpg" width="1440" height="900" alt="Cairn 封面：左侧是提问框，右侧是一张真实回答卡，标出了 24×24 CSS 像素，下方是 2.5.8 AA 目标尺寸（最低）的胶囊和它依据的 W3C 原句。" loading="eager">
+        <img data-l="en" src="assets/cairn/hero-en.jpg" width="1440" height="900" alt="The Cairn cover: the campus choice and the question field on the left; on the right a real answer card about deferring an exam, with the Monash page it rests on, the campus it applies to, and the English sentence it quotes." loading="eager" fetchpriority="high">
+        <img data-l="zh" src="assets/cairn/hero-zh.jpg" width="1440" height="900" alt="Cairn 封面：左侧是校区选择和提问框，右侧是一张关于考试延期的真实回答卡，下方是它依据的 Monash 页面、适用校区和引用的英文原句。" loading="eager">
       </div>
     </div>
 
@@ -62,35 +62,35 @@
           <div class="row">
             <h2 class="as-h3" id="c-problem"><span data-l="en">The problem</span><span data-l="zh">问题</span></h2>
             <div>
-              <p><span data-l="en">Teams building for the web keep asking the same questions: how big must a button be, what contrast does body text need. The answers are in WCAG 2.2, the W3C’s accessibility standard, but the text is long, formal and English, so people reach for paraphrases, and compliance turns on the wording.</span><span data-l="zh">做网页的团队总在问同样的问题：按钮至少多大、正文对比度多少。答案在 W3C 的无障碍标准 WCAG 2.2 里，但原文长、正式、是英文，于是大家去找转述，而合规看的正是措辞。</span></p>
+              <p><span data-l="en">Every semester students ask the same questions: I was sick on exam day, can I defer? What is the deadline for special consideration? If I withdraw after the census date, do I get my fees back? The answers are on the university’s own pages, but they are long, spread across sites and different for different campuses, so people ask friends or a chatbot and get a paraphrase. A paraphrase with the wrong deadline costs a semester.</span><span data-l="zh">每学期学生都在问同样的问题：考试那天病了能不能延期？特殊考量最晚什么时候申请？过了 census date 退课学费还退吗？答案就在学校自己的页面上，但页面长、分散在不同站点、各校区还不一样，于是大家问朋友或问聊天机器人，拿到的是转述。截止时间转述错一个，就是一个学期。</span></p>
             </div>
           </div>
           <div class="row">
             <h2 class="as-h3"><span data-l="en">What it does</span><span data-l="zh">它做什么</span></h2>
             <ul>
-              <li><span data-l="en">The conclusion in one or two sentences, key figures marked, the criterion as a pill.</span><span data-l="zh">一两句话结论，关键数字标出，条款编号和级别列成胶囊。</span></li>
-              <li><span data-l="en">Every point rests on a W3C quote the server has found word for word; if none is found, no answer.</span><span data-l="zh">每个要点都落在服务器逐字找到的 W3C 原句上；一句都找不到就不显示回答。</span></li>
-              <li><span data-l="en">The route under every answer: the passages retrieved, their scores, why each is there.</span><span data-l="zh">每条回答下方的路线：检索到的段落、分数和入选原因。</span></li>
-              <li><span data-l="en">A library of all 87 criteria, and of every question it could not answer.</span><span data-l="zh">全部 87 条标准的资料库，以及每个答不上来的问题。</span></li>
+              <li><span data-l="en">You pick your campus first. Shared pages are always searched; your campus adds its own.</span><span data-l="zh">先选校区。通用页面始终会搜，再加上你校区自己的页面。</span></li>
+              <li><span data-l="en">The bottom line in one or two sentences, deadlines marked, the page and its campus as a pill.</span><span data-l="zh">一两句话结论，截止时间标出，页面和适用校区列成胶囊。</span></li>
+              <li><span data-l="en">Every point rests on a sentence from the page the server has found word for word; if none is found, no answer.</span><span data-l="zh">每个要点都落在服务器逐字找到的原句上；一句都找不到就不显示回答。</span></li>
+              <li><span data-l="en">The route under every answer, and a library of all 58 pages by topic that keeps every question it could not answer.</span><span data-l="zh">每条回答下方的路线，以及按主题列出 58 个页面、记下每个答不上来的问题的资料库。</span></li>
             </ul>
           </div>
         </div>
         <div class="gallery">
           <figure>
-            <div class="shot clear"><img data-l="en" src="assets/cairn/en-answer.webp" width="1600" height="1200" alt="The desk: the conclusion in large type with 2.5.8 and 24 by 24 CSS pixels highlighted, and pills for the criteria beneath." loading="lazy"><img data-l="zh" src="assets/cairn/zh-answer.webp" width="1600" height="1200" alt="问答台：大字的结论，2.5.8 和 24×24 CSS 像素被标出，下方是成功标准胶囊。" loading="lazy"></div>
-            <figcaption><span data-l="en">The conclusion first, the key figures marked, the criteria as pills.</span><span data-l="zh">结论先说，关键数字标出，成功标准列成胶囊。</span></figcaption>
+            <div class="shot clear"><img data-l="en" src="assets/cairn/en-answer.webp" width="1600" height="1200" alt="The desk: the question as the heading, the status Answered for the Malaysia campus, the bottom line in large type, and a pill naming the Monash page and All campuses." loading="lazy"><img data-l="zh" src="assets/cairn/zh-answer.webp" width="1600" height="1200" alt="问答台：问题是标题，状态为按马来西亚校区回答，大字的结论，下方是写着 Monash 页面名和所有校区的胶囊。" loading="lazy"></div>
+            <figcaption><span data-l="en">The bottom line first, the page and its campus beneath.</span><span data-l="zh">结论先说，页面和适用校区在下面。</span></figcaption>
           </figure>
           <figure>
-            <div class="shot clear"><img data-l="en" src="assets/cairn/en-quotes.webp" width="1600" height="1200" alt="Two points, each over the English W3C sentence it rests on, marked Verified word for word, with a link to read it at W3C." loading="lazy"><img data-l="zh" src="assets/cairn/zh-quotes.webp" width="1600" height="1200" alt="两个要点，各自下方是依据的英文原句，标有逐字核对通过和 W3C 链接。" loading="lazy"></div>
+            <div class="shot clear"><img data-l="en" src="assets/cairn/en-quotes.webp" width="1600" height="1200" alt="Two points, each over the English Monash sentence it rests on, marked Verified word for word, with the page, its section, the campus it applies to and a link to read the page." loading="lazy"><img data-l="zh" src="assets/cairn/zh-quotes.webp" width="1600" height="1200" alt="两个要点，各自下方是依据的英文原句，标有逐字核对通过、页面和小节、适用校区和阅读原页的链接。" loading="lazy"></div>
             <figcaption><span data-l="en">Each point over the sentence it rests on, verified word for word.</span><span data-l="zh">每个要点下面是它依据的原句，逐字核对通过。</span></figcaption>
           </figure>
           <figure>
-            <div class="shot clear"><img data-l="en" src="assets/cairn/en-trace.webp" width="1600" height="1200" alt="The route panel: a table of the passages retrieved with rank, rerank score and why each is there." loading="lazy"><img data-l="zh" src="assets/cairn/zh-trace.webp" width="1600" height="1200" alt="路线面板：检索到的段落表，含名次、重排分和入选原因。" loading="lazy"></div>
-            <figcaption><span data-l="en">How this answer was made: every passage, its score, its reason.</span><span data-l="zh">这条回答是怎么来的：每一段、它的分数、入选原因。</span></figcaption>
+            <div class="shot clear"><img data-l="en" src="assets/cairn/en-trace.webp" width="1600" height="1200" alt="The route panel: a table of the passages retrieved with rank, the campus each applies to and its rerank score." loading="lazy"><img data-l="zh" src="assets/cairn/zh-trace.webp" width="1600" height="1200" alt="路线面板：检索到的段落表，含名次、适用校区和重排分。" loading="lazy"></div>
+            <figcaption><span data-l="en">How this answer was made: every passage, its campus, its score.</span><span data-l="zh">这条回答是怎么来的：每一段、它的校区、它的分数。</span></figcaption>
           </figure>
           <figure>
-            <div class="shot clear"><img data-l="en" src="assets/cairn/en-library.webp" width="1600" height="1200" alt="The library: success criteria grouped by principle with level and passage count." loading="lazy"><img data-l="zh" src="assets/cairn/zh-library.webp" width="1600" height="1200" alt="资料库：按原则分组的成功标准，带级别和段落数。" loading="lazy"></div>
-            <figcaption><span data-l="en">The library: 87 criteria by principle, and the gaps.</span><span data-l="zh">资料库：按原则分组的 87 条标准，以及知识缺口。</span></figcaption>
+            <div class="shot clear"><img data-l="en" src="assets/cairn/en-library.webp" width="1600" height="1200" alt="The library: Monash pages grouped by topic, filtered to the Malaysia campus, with the campus each applies to and its passage count." loading="lazy"><img data-l="zh" src="assets/cairn/zh-library.webp" width="1600" height="1200" alt="资料库：按主题分组的 Monash 页面，筛选为马来西亚校区，带适用校区和段落数。" loading="lazy"></div>
+            <figcaption><span data-l="en">The library: 58 pages by topic, a campus filter, and the gaps.</span><span data-l="zh">资料库：按主题分组的 58 个页面、校区筛选，以及知识缺口。</span></figcaption>
           </figure>
         </div>
       </div>
@@ -103,40 +103,44 @@
           <p class="lead"><span data-l="en">Retrieval, then generation limited to what was retrieved, then verification in code. The last step is what makes the first two trustworthy.</span><span data-l="zh">先检索，再只根据检索结果生成，最后用代码核对。最后一步才让前两步可信。</span></p>
         </div>
         <svg class="diagram" viewBox="0 0 1224 190" role="img" aria-labelledby="c-diagram-title">
-          <title id="c-diagram-title">Pipeline: question, embed and retrieve, rerank, write, verify, answer</title>
+          <title id="c-diagram-title">Pipeline: campus and question, embed and retrieve, rerank, write, verify, answer</title>
           <defs><marker id="c-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="oklch(50% 0.12 234)"/></marker></defs>
-          <g><rect class="d-box" x="2" y="30" width="180" height="128" rx="14"/><text class="d-n" x="22" y="64">1</text><text x="22" y="96" data-l="en">Question</text><text x="22" y="96" data-l="zh">提问</text><text class="d-sub" x="22" y="120" data-l="en">English or Chinese</text><text class="d-sub" x="22" y="120" data-l="zh">中文或英文</text></g>
+          <g><rect class="d-box" x="2" y="30" width="180" height="128" rx="14"/><text class="d-n" x="22" y="64">1</text><text x="22" y="96" data-l="en">Campus, question</text><text x="22" y="96" data-l="zh">校区、提问</text><text class="d-sub" x="22" y="120" data-l="en">Chinese is rendered</text><text class="d-sub" x="22" y="120" data-l="zh">中文先译成英文</text><text class="d-sub" x="22" y="140" data-l="en">in English to search</text><text class="d-sub" x="22" y="140" data-l="zh">用于检索</text></g>
           <path class="d-arrow" d="M184 94h22" marker-end="url(#c-arrow)"/>
-          <g><rect class="d-box" x="210" y="30" width="180" height="128" rx="14"/><text class="d-n" x="230" y="64">2</text><text x="230" y="96" data-l="en">Embed, retrieve</text><text x="230" y="96" data-l="zh">向量检索</text><text class="d-sub" x="230" y="120" data-l="en">e5-small · 20 nearest</text><text class="d-sub" x="230" y="120" data-l="zh">e5-small · 最近 20 段</text><text class="d-sub" x="230" y="140" data-l="en">of 1006 passages</text><text class="d-sub" x="230" y="140" data-l="zh">共 1006 段</text></g>
+          <g><rect class="d-box" x="210" y="30" width="180" height="128" rx="14"/><text class="d-n" x="230" y="64">2</text><text x="230" y="96" data-l="en">Embed, retrieve</text><text x="230" y="96" data-l="zh">向量检索</text><text class="d-sub" x="230" y="120" data-l="en">e5-small · 20 nearest</text><text class="d-sub" x="230" y="120" data-l="zh">e5-small · 最近 20 段</text><text class="d-sub" x="230" y="140" data-l="en">shared + your campus</text><text class="d-sub" x="230" y="140" data-l="zh">通用页 + 本校区页</text></g>
           <path class="d-arrow" d="M392 94h22" marker-end="url(#c-arrow)"/>
-          <g><rect class="d-box" x="418" y="30" width="180" height="128" rx="14"/><text class="d-n" x="438" y="64">3</text><text x="438" y="96" data-l="en">Rerank</text><text x="438" y="96" data-l="zh">重排序</text><text class="d-sub" x="438" y="120" data-l="en">bge-reranker · 6 kept</text><text class="d-sub" x="438" y="120" data-l="zh">bge-reranker · 保留 6 段</text><text class="d-sub" x="438" y="140" data-l="en">+ the rule text</text><text class="d-sub" x="438" y="140" data-l="zh">+ 条款正文</text></g>
+          <g><rect class="d-box" x="418" y="30" width="180" height="128" rx="14"/><text class="d-n" x="438" y="64">3</text><text x="438" y="96" data-l="en">Rerank</text><text x="438" y="96" data-l="zh">重排序</text><text class="d-sub" x="438" y="120" data-l="en">bge-reranker · 6 kept</text><text class="d-sub" x="438" y="120" data-l="zh">bge-reranker · 保留 6 段</text><text class="d-sub" x="438" y="140" data-l="en">of 747 passages</text><text class="d-sub" x="438" y="140" data-l="zh">共 747 段</text></g>
           <path class="d-arrow" d="M600 94h22" marker-end="url(#c-arrow)"/>
           <g><rect class="d-box" x="626" y="30" width="180" height="128" rx="14"/><text class="d-n" x="646" y="64">4</text><text x="646" y="96" data-l="en">Write</text><text x="646" y="96" data-l="zh">写回答</text><text class="d-sub" x="646" y="120" data-l="en">Claude Haiku 5.5</text><text class="d-sub" x="646" y="120" data-l="zh">Claude Haiku 5.5</text><text class="d-sub" x="646" y="140" data-l="en">sources: an enum</text><text class="d-sub" x="646" y="140" data-l="zh">来源只能是枚举值</text></g>
           <path class="d-arrow" d="M808 94h22" marker-end="url(#c-arrow)"/>
           <g><rect class="d-box d-box--on" x="834" y="30" width="180" height="128" rx="14"/><text class="d-n" x="854" y="64">5</text><text x="854" y="96" data-l="en">Verify</text><text x="854" y="96" data-l="zh">逐字核对</text><text class="d-sub" x="854" y="120" data-l="en">every quote, word</text><text class="d-sub" x="854" y="120" data-l="zh">每条引文在原文里</text><text class="d-sub" x="854" y="140" data-l="en">for word, or withheld</text><text class="d-sub" x="854" y="140" data-l="zh">逐字找到，否则拦截</text></g>
           <path class="d-arrow" d="M1016 94h22" marker-end="url(#c-arrow)"/>
-          <g><rect class="d-box" x="1042" y="30" width="180" height="128" rx="14"/><text class="d-n" x="1062" y="64">6</text><text x="1062" y="96" data-l="en">Answer</text><text x="1062" y="96" data-l="zh">回答</text><text class="d-sub" x="1062" y="120" data-l="en">facts marked, route</text><text class="d-sub" x="1062" y="120" data-l="zh">标出关键数字</text><text class="d-sub" x="1062" y="140" data-l="en">shown underneath</text><text class="d-sub" x="1062" y="140" data-l="zh">路线在下方展开</text></g>
+          <g><rect class="d-box" x="1042" y="30" width="180" height="128" rx="14"/><text class="d-n" x="1062" y="64">6</text><text x="1062" y="96" data-l="en">Answer</text><text x="1062" y="96" data-l="zh">回答</text><text class="d-sub" x="1062" y="120" data-l="en">deadline marked, page</text><text class="d-sub" x="1062" y="120" data-l="zh">标出截止时间</text><text class="d-sub" x="1062" y="140" data-l="en">and campus labelled</text><text class="d-sub" x="1062" y="140" data-l="zh">标明页面和校区</text></g>
         </svg>
         <ol class="steps">
-          <li><span class="d-n">1</span><strong><span data-l="en">Question</span><span data-l="zh">提问</span></strong><span class="small"><span data-l="en">English or Chinese</span><span data-l="zh">中文或英文</span></span></li>
-          <li><span class="d-n">2</span><strong><span data-l="en">Embed and retrieve</span><span data-l="zh">向量检索</span></strong><span class="small"><span data-l="en">e5-small; the 20 nearest of 1006 passages</span><span data-l="zh">e5-small，1006 段里最近的 20 段</span></span></li>
-          <li><span class="d-n">3</span><strong><span data-l="en">Rerank</span><span data-l="zh">重排序</span></strong><span class="small"><span data-l="en">bge-reranker; 6 kept, plus the rule text</span><span data-l="zh">bge-reranker，保留 6 段，再补条款正文</span></span></li>
-          <li><span class="d-n">4</span><strong><span data-l="en">Write</span><span data-l="zh">写回答</span></strong><span class="small"><span data-l="en">Claude Haiku 5.5; sources limited to an enum of the retrieved ids</span><span data-l="zh">Claude Haiku 5.5，来源只能是检索到的段落 id</span></span></li>
+          <li><span class="d-n">1</span><strong><span data-l="en">Campus, then question</span><span data-l="zh">先选校区，再提问</span></strong><span class="small"><span data-l="en">English or Chinese; a Chinese question is rendered in English for the search</span><span data-l="zh">中文或英文；中文问题先译成一句英文用于检索</span></span></li>
+          <li><span class="d-n">2</span><strong><span data-l="en">Embed and retrieve</span><span data-l="zh">向量检索</span></strong><span class="small"><span data-l="en">e5-small; the 20 nearest of 747 passages, from the shared pages plus your campus’s own</span><span data-l="zh">e5-small，747 段里最近的 20 段，范围是通用页面加本校区页面</span></span></li>
+          <li><span class="d-n">3</span><strong><span data-l="en">Rerank</span><span data-l="zh">重排序</span></strong><span class="small"><span data-l="en">bge-reranker; 6 kept</span><span data-l="zh">bge-reranker，保留 6 段</span></span></li>
+          <li><span class="d-n">4</span><strong><span data-l="en">Write</span><span data-l="zh">写回答</span></strong><span class="small"><span data-l="en">Claude Haiku 5.5; sources limited to an enum of the retrieved ids; no invented dates, fees or contacts</span><span data-l="zh">Claude Haiku 5.5，来源只能是检索到的段落 id，不许编日期、费用和联系方式</span></span></li>
           <li><span class="d-n">5</span><strong><span data-l="en">Verify</span><span data-l="zh">逐字核对</span></strong><span class="small"><span data-l="en">every quote found word for word, or the answer is withheld</span><span data-l="zh">每条引文逐字找到，否则拦截</span></span></li>
-          <li><span class="d-n">6</span><strong><span data-l="en">Answer</span><span data-l="zh">回答</span></strong><span class="small"><span data-l="en">key facts marked, the route shown underneath</span><span data-l="zh">标出关键数字，路线在下方展开</span></span></li>
+          <li><span class="d-n">6</span><strong><span data-l="en">Answer</span><span data-l="zh">回答</span></strong><span class="small"><span data-l="en">deadline marked, the page and its campus labelled, the route shown underneath</span><span data-l="zh">标出截止时间，标明页面和校区，路线在下方展开</span></span></li>
         </ol>
         <div class="rows rows--loose" style="margin-top:var(--space-2xl)">
           <div class="row">
             <h3><span data-l="en">Grounding as a mechanism</span><span data-l="zh">把"有依据"做成机制</span></h3>
-            <p><span data-l="en">The model’s structured output has a <code>source_id</code> field whose allowed values are exactly the retrieved passage ids, so it cannot cite a source it was not given. The server then looks for every quote in its passage, and the criteria shown come only from verified quotes.</span><span data-l="zh">模型结构化输出里的 <code>source_id</code> 字段，允许值就是这次检索到的段落 id，它引不了没给过它的来源。服务器再把每条引文在原段落里查找，显示的条款只来自核对通过的引文。</span></p>
+            <p><span data-l="en">The model’s structured output has a <code>source_id</code> field whose allowed values are exactly the retrieved passage ids, so it cannot cite a source it was not given. The server then looks for every quote in its passage, and the pages shown come only from verified quotes.</span><span data-l="zh">模型结构化输出里的 <code>source_id</code> 字段，允许值就是这次检索到的段落 id，它引不了没给过它的来源。服务器再把每条引文在原段落里查找，显示的页面只来自核对通过的引文。</span></p>
           </div>
           <div class="row">
-            <h3><span data-l="en">Chinese questions, English text</span><span data-l="zh">中文问题，英文原文</span></h3>
-            <p><span data-l="en">A multilingual embedding model puts Chinese questions and English passages in one space, so nothing is translated. Keyword search found the right criterion for 6 of 40 questions; vectors found 28 at first position, and a local reranker lifted that to 32.</span><span data-l="zh">多语言向量模型把中文问题和英文段落放进同一个空间，不用翻译。关键词检索 40 道题只找对 6 道；向量第一名命中 28 道，本地重排序后提到 32 道。</span></p>
+            <h3><span data-l="en">Chinese questions, English pages</span><span data-l="zh">中文问题，英文页面</span></h3>
+            <p><span data-l="en">A multilingual embedding model alone missed the deferral page for “I was sick on exam day”. Rendering the question in English before the search fixed it: Chinese questions went from 18 to 19 of 20 with the right page in the top five, and MRR from 0.69 to 0.86. The route panel shows the English search text, so nothing is hidden.</span><span data-l="zh">只靠多语言向量模型时，"考试那天病了能不能延期"没找到延期页。先把问题译成英文再检索就好了：中文题前五命中从 20 道里的 18 道到 19 道，MRR 从 0.69 到 0.86。路线面板会显示那句英文检索词，不藏起来。</span></p>
           </div>
           <div class="row">
-            <h3><span data-l="en">A bug the trace caught</span><span data-l="zh">路线面板抓到的一个 bug</span></h3>
-            <p><span data-l="en">Ten criteria have rule text split across passages. The first version kept only the last part, so the touch-target question never saw the sentence that says 24 by 24 CSS pixels. The retrieval trace exposed it; now every part is added.</span><span data-l="zh">有 10 条标准的正文被切成多段。第一版只补了最后一段，于是触控目标那题根本没看到写着 24×24 CSS 像素的那句。看检索路线才发现；现在每一段都会补进去。</span></p>
+            <h3><span data-l="en">Three campuses, one filter</span><span data-l="zh">三个校区，一个过滤</span></h3>
+            <p><span data-l="en">Searching only the chosen campus lost the shared pages; searching everything mixed Malaysian and Australian dates. The filter always includes the shared pages and adds the chosen campus, and every source carries a campus label, so a rule that is specific is visibly specific.</span><span data-l="zh">只搜所选校区会丢掉通用页面；全搜又会把马来西亚和澳大利亚的日期混在一起。现在的过滤始终包含通用页面、再加所选校区，每条来源都带校区标签，专属的规定一眼看得出。</span></p>
+          </div>
+          <div class="row">
+            <h3><span data-l="en">A corpus that is not ours</span><span data-l="zh">资料不是我们的</span></h3>
+            <p><span data-l="en">The pages are the university’s, so they are not in the repository. It holds the page list and a script that reads the pages in your own browser; the desk shows short excerpts with a link to each page; the public demo carries the quotes but not whole passages. The same code serves another organisation from another folder of pages and another prompt.</span><span data-l="zh">页面是学校的，所以不放进仓库。仓库里只有页面清单和一个在你自己浏览器里读页面的脚本；问答台只显示短引文并链接原页；公开演示里只有引文、没有整段原文。换一个机构的规定，就是换一个页面文件夹和一段提示词。</span></p>
           </div>
         </div>
       </div>
@@ -146,23 +150,23 @@
       <div class="container">
         <div class="head">
           <h2 id="c-measured"><span data-l="en">Measured</span><span data-l="zh">实测</span></h2>
-          <p class="lead"><span data-l="en">Retrieval over 40 questions written by the team (20 English, 20 Chinese), each labelled with the correct criterion. A method scores when that criterion is in its top 1, 3 or 5 passages.</span><span data-l="zh">检索评测用团队自拟的 40 道题（中英各 20），每题标出正确条款；条款进入某方法的前 1、3、5 名就算命中。</span></p>
+          <p class="lead"><span data-l="en">Retrieval over 45 questions written by the team the way students ask them (25 English, 20 Chinese), each labelled with the Monash page that answers it. A method scores when that page is in its top 1, 3 or 5 passages.</span><span data-l="zh">检索评测用团队按学生问法写的 45 道题（英 25、中 20），每题标出能回答它的 Monash 页面；页面进入某方法的前 1、3、5 名就算命中。</span></p>
         </div>
         <table class="results">
           <thead><tr><th scope="col"><span data-l="en">Method</span><span data-l="zh">方法</span></th><th scope="col" class="num"><span data-l="en">Top 1</span><span data-l="zh">前 1</span></th><th scope="col" class="num"><span data-l="en">Top 3</span><span data-l="zh">前 3</span></th><th scope="col" class="num"><span data-l="en">Top 5</span><span data-l="zh">前 5</span></th><th scope="col" class="num">MRR@10</th></tr></thead>
           <tbody>
-            <tr><td><span data-l="en">Keyword (BM25)</span><span data-l="zh">关键词（BM25）</span></td><td class="num">6 / 40</td><td class="num">10 / 40</td><td class="num">13 / 40</td><td class="num">0.21</td></tr>
-            <tr><td><span data-l="en">Vector</span><span data-l="zh">向量</span></td><td class="num">28 / 40</td><td class="num">38 / 40</td><td class="num">39 / 40</td><td class="num">0.82</td></tr>
-            <tr><td><span data-l="en">Hybrid, RRF fusion</span><span data-l="zh">混合，RRF 融合</span></td><td class="num">23 / 40</td><td class="num">37 / 40</td><td class="num">39 / 40</td><td class="num">0.75</td></tr>
-            <tr data-on><td><span data-l="en">Vector + rerank (in use)</span><span data-l="zh">向量 + 重排序（采用）</span></td><td class="num">32 / 40</td><td class="num">39 / 40</td><td class="num">39 / 40</td><td class="num">0.88</td></tr>
-            <tr><td><span data-l="en">RRF + rerank</span><span data-l="zh">RRF + 重排序</span></td><td class="num">31 / 40</td><td class="num">39 / 40</td><td class="num">39 / 40</td><td class="num">0.86</td></tr>
+            <tr><td><span data-l="en">Keyword (BM25)</span><span data-l="zh">关键词（BM25）</span></td><td class="num">11 / 45</td><td class="num">22 / 45</td><td class="num">25 / 45</td><td class="num">0.38</td></tr>
+            <tr><td><span data-l="en">Vector</span><span data-l="zh">向量</span></td><td class="num">26 / 45</td><td class="num">35 / 45</td><td class="num">41 / 45</td><td class="num">0.71</td></tr>
+            <tr><td><span data-l="en">Hybrid, RRF fusion</span><span data-l="zh">混合，RRF 融合</span></td><td class="num">26 / 45</td><td class="num">36 / 45</td><td class="num">40 / 45</td><td class="num">0.70</td></tr>
+            <tr><td><span data-l="en">Vector + rerank</span><span data-l="zh">向量 + 重排序</span></td><td class="num">29 / 45</td><td class="num">39 / 45</td><td class="num">43 / 45</td><td class="num">0.76</td></tr>
+            <tr data-on><td><span data-l="en">Translate + vector + rerank (in use)</span><span data-l="zh">翻译 + 向量 + 重排序（采用）</span></td><td class="num">34 / 45</td><td class="num">41 / 45</td><td class="num">44 / 45</td><td class="num">0.84</td></tr>
           </tbody>
         </table>
         <table class="results">
-          <thead><tr><th scope="col"><span data-l="en">Check</span><span data-l="zh">检查</span></th><th scope="col"><span data-l="en">Result (9 November 2026)</span><span data-l="zh">结果（2026 年 11 月 9 日）</span></th></tr></thead>
+          <thead><tr><th scope="col"><span data-l="en">Check</span><span data-l="zh">检查</span></th><th scope="col"><span data-l="en">Result (10 November 2026)</span><span data-l="zh">结果（2026 年 11 月 10 日）</span></th></tr></thead>
           <tbody>
-            <tr><td><span data-l="en">Smoke test, 7 live questions</span><span data-l="zh">冒烟测试，7 道实问</span></td><td><span data-l="en">7 of 7 requests succeeded: four answered with every quote verified, one not covered, one asked for a detail, one injection attempt answered with the real rule.</span><span data-l="zh">7 次请求全部成功：4 道回答且引文全部核对通过，1 道未覆盖，1 道要求补充细节，1 道注入攻击按真实条款回答。</span></td></tr>
-            <tr><td><span data-l="en">Cost per question</span><span data-l="zh">每题成本</span></td><td><span data-l="en">About 0.07 US cents (2936 input, 721 output tokens on average).</span><span data-l="zh">约 0.07 美分（平均输入 2936、输出 721 个 token）。</span></td></tr>
+            <tr><td><span data-l="en">Smoke test, 7 live questions with campus</span><span data-l="zh">冒烟测试，7 道带校区的实问</span></td><td><span data-l="en">7 of 7 requests succeeded: four answered with every quote verified, one honestly not covered, one asked for a missing detail, one injection attempt (a false deadline) answered “the passages do not say that”.</span><span data-l="zh">7 次请求全部成功：4 道回答且引文全部核对通过，1 道如实未覆盖，1 道要求补充细节，1 道注入攻击（谎称的截止时间）答"段落没有这么说"。</span></td></tr>
+            <tr><td><span data-l="en">The library</span><span data-l="zh">资料库</span></td><td><span data-l="en">58 public pages, 747 passages, read on 9 November 2026; every answer links to its page.</span><span data-l="zh">58 个公开页面、747 个段落，2026 年 11 月 9 日读取；每条回答都链接到原页。</span></td></tr>
             <tr><td><span data-l="en">Accessibility (axe-core 4.10)</span><span data-l="zh">无障碍（axe-core 4.10）</span></td><td><span data-l="en">0 violations: five pages, both languages, desktop and phone.</span><span data-l="zh">0 违规：5 个页面、中英文、电脑和手机。</span></td></tr>
           </tbody>
         </table>
@@ -177,18 +181,18 @@
           <div class="row">
             <h3><span data-l="en">Learned</span><span data-l="zh">学到的</span></h3>
             <ul>
+              <li><span data-l="en">Pick the corpus by need, not by licence. The first corpus was WCAG 2.2: clean to license, and nobody needed it. The mechanism stayed; the corpus went.</span><span data-l="zh">按需求选资料，不是按许可证。第一版装的是 WCAG 2.2：许可干净，没人需要。机制留下，资料换掉。</span></li>
               <li><span data-l="en">Grounding has to be a mechanism, not a prompt: the enum and the server check did the work.</span><span data-l="zh">"有依据"必须是机制，不是提示词：枚举和服务器核对才是起作用的部分。</span></li>
-              <li><span data-l="en">Measure retrieval separately from generation; most wrong answers were retrieval misses.</span><span data-l="zh">检索和生成分开测；多数错误回答是检索没找对。</span></li>
-              <li><span data-l="en">Explain the subject before the product; the cover now teaches what WCAG is first.</span><span data-l="zh">先讲清对象再讲产品；封面现在先教 WCAG 是什么。</span></li>
+              <li><span data-l="en">Measure retrieval separately and read the misses; the translation fix came from the trace of one bad answer.</span><span data-l="zh">检索单独测，并且去看没命中的题；翻译这一步是从一条坏回答的路线里看出来的。</span></li>
             </ul>
           </div>
           <div class="row">
             <h3><span data-l="en">Limits</span><span data-l="zh">局限</span></h3>
             <ul>
-              <li><span data-l="en">87 criteria and their Understanding documents only: no Techniques, no test rules.</span><span data-l="zh">只有 87 条标准和理解文档，没有技术文档和测试规则。</span></li>
-              <li><span data-l="en">An exact quote can still be misapplied. Read the criterion; this is not legal advice.</span><span data-l="zh">引文一字不差，回答仍可能用错。请读条款本身；这不是法律意见。</span></li>
+              <li><span data-l="en">58 pages only: no unit guides, no faculty rules, nothing behind a login. Rules change; the desk shows what the pages said when read.</span><span data-l="zh">只有 58 个页面：没有单元指南、院系规定，没有登录后的内容。规定会变，问答台显示的是读取当时的说法。</span></li>
+              <li><span data-l="en">An exact quote can still be misapplied, for example an Australian rule to a Malaysia student; the campus label is there so you can see it. Read the page, or ask Monash Connect.</span><span data-l="zh">引文一字不差，回答仍可能用错，比如把澳洲的规定答给马来西亚的学生；校区标签就是为了让你看出来。请读原页，或问 Monash Connect。</span></li>
               <li><span data-l="en">The verifier rejects paraphrase, so some good answers are withheld, by choice.</span><span data-l="zh">核对器不接受改写，有些好回答会被拦下，这是有意的取舍。</span></li>
-              <li><span data-l="en">W3C text quoted unchanged under its licence.</span><span data-l="zh">W3C 原文依据其许可原样引用。</span></li>
+              <li><span data-l="en">Page text © Monash University, quoted in short excerpts with links; unofficial, not affiliated.</span><span data-l="zh">页面文字版权归 Monash University，仅短句摘录并附链接；非官方，无关联。</span></li>
             </ul>
           </div>
         </div>
