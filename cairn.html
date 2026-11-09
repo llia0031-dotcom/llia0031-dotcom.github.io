@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Cairn: a bilingual WCAG 2.2 knowledge desk on retrieval. Every answer names the success criterion and quotes the W3C text word for word, checked by the server. A case study by Liang Liyuan.">
+  <title data-en="Cairn · Liang Liyuan" data-zh="Cairn · Liang Liyuan">Cairn · Liang Liyuan</title>
+  <script>try{if(localStorage.getItem('site-lang')==='zh'){document.documentElement.setAttribute('data-lang','zh');document.documentElement.lang='zh-CN'}}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500&family=Funnel+Sans:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="container bar-inner">
+      <a class="wordmark" href="./">Liang Liyuan</a>
+      <nav class="nav" aria-label="Site">
+        <a href="./#work" aria-current="page"><span data-l="en">Work</span><span data-l="zh">作品</span></a>
+        <a href="./#about"><span data-l="en">About</span><span data-l="zh">关于</span></a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language / 语言">
+        <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      </div>
+      <a class="btn btn--accent" href="https://github.com/Jason-d-e" rel="me noreferrer">GitHub</a>
+    </div>
+  </header>
+
+  <main>
+    <header class="container case-head">
+      <h1>Cairn</h1>
+      <p class="lead">
+        <span data-l="en">A knowledge desk for WCAG 2.2. Ask in English or Chinese; the answer names the success criterion and quotes the W3C text word for word, and the server checks every quote against its source before you see it.</span>
+        <span data-l="zh">WCAG 2.2 的知识问答台。用中文或英文提问，回答点名成功标准并逐字引用 W3C 原文；服务器在你看到之前把每条引文和原文核对。</span>
+      </p>
+      <ul class="meta" aria-label="Project facts">
+        <li class="pill pill--soft">LaunchPad Hacks 2026</li>
+        <li class="pill"><span data-l="en">9 to 10 November 2026</span><span data-l="zh">2026 年 11 月 9 至 10 日</span></li>
+        <li class="pill"><span data-l="en">Team: Liang Liyuan, ZIzi821</span><span data-l="zh">团队：Liang Liyuan、ZIzi821</span></li>
+        <li class="pill">Node.js, React, Claude Haiku 5.5</li>
+      </ul>
+      <div class="actions">
+        <a class="btn btn--accent" href="https://jason-d-e.github.io/cairn/" rel="noreferrer"><span data-l="en">Live demo</span><span data-l="zh">在线演示</span></a>
+        <a class="btn btn--clear" href="https://github.com/Jason-d-e/cairn" rel="noreferrer"><span data-l="en">Source on GitHub</span><span data-l="zh">GitHub 源码</span></a>
+      </div>
+      <p class="small case-note"><span data-l="en">The demo is static: it shows twelve real answers recorded on 9 November 2026 and cannot answer new questions.</span><span data-l="zh">演示是静态版：展示 2026 年 11 月 9 日记录的 12 条真实回答，不能回答新问题。</span></p>
+    </header>
+
+    <div class="container case-shot">
+      <div class="shot clear clear--lead">
+        <img data-l="en" src="assets/cairn/hero-en.jpg" width="1440" height="900" alt="The Cairn cover: the question field on the left, and on the right a real answer card with the figure 24 by 24 CSS pixels marked, the pill 2.5.8 AA Target Size (Minimum), and the W3C sentence it rests on." loading="eager" fetchpriority="high">
+        <img data-l="zh" src="assets/cairn/hero-zh.jpg" width="1440" height="900" alt="Cairn 封面：左侧是提问框，右侧是一张真实回答卡，标出了 24×24 CSS 像素，下方是 2.5.8 AA 目标尺寸（最低）的胶囊和它依据的 W3C 原句。" loading="eager">
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="c-problem" style="padding-top:0">
+      <div class="container">
+        <div class="rows rows--loose">
+          <div class="row">
+            <h2 class="as-h3" id="c-problem"><span data-l="en">The problem</span><span data-l="zh">问题</span></h2>
+            <div>
+              <p><span data-l="en">Teams building for the web keep asking the same questions: how big must a button be, what contrast does body text need. The answers are in WCAG 2.2, the W3C’s accessibility standard, but the text is long, formal and English, so people reach for paraphrases, and compliance turns on the wording.</span><span data-l="zh">做网页的团队总在问同样的问题：按钮至少多大、正文对比度多少。答案在 W3C 的无障碍标准 WCAG 2.2 里，但原文长、正式、是英文，于是大家去找转述，而合规看的正是措辞。</span></p>
+            </div>
+          </div>
+          <div class="row">
+            <h2 class="as-h3"><span data-l="en">What it does</span><span data-l="zh">它做什么</span></h2>
+            <ul>
+              <li><span data-l="en">The conclusion in one or two sentences, key figures marked, the criterion as a pill.</span><span data-l="zh">一两句话结论，关键数字标出，条款编号和级别列成胶囊。</span></li>
+              <li><span data-l="en">Every point rests on a W3C quote the server has found word for word; if none is found, no answer.</span><span data-l="zh">每个要点都落在服务器逐字找到的 W3C 原句上；一句都找不到就不显示回答。</span></li>
+              <li><span data-l="en">The route under every answer: the passages retrieved, their scores, why each is there.</span><span data-l="zh">每条回答下方的路线：检索到的段落、分数和入选原因。</span></li>
+              <li><span data-l="en">A library of all 87 criteria, and of every question it could not answer.</span><span data-l="zh">全部 87 条标准的资料库，以及每个答不上来的问题。</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="gallery">
+          <figure>
+            <div class="shot clear"><img data-l="en" src="assets/cairn/en-answer.webp" width="1600" height="1200" alt="The desk: the conclusion in large type with 2.5.8 and 24 by 24 CSS pixels highlighted, and pills for the criteria beneath." loading="lazy"><img data-l="zh" src="assets/cairn/zh-answer.webp" width="1600" height="1200" alt="问答台：大字的结论，2.5.8 和 24×24 CSS 像素被标出，下方是成功标准胶囊。" loading="lazy"></div>
+            <figcaption><span data-l="en">The conclusion first, the key figures marked, the criteria as pills.</span><span data-l="zh">结论先说，关键数字标出，成功标准列成胶囊。</span></figcaption>
+          </figure>
+          <figure>
+            <div class="shot clear"><img data-l="en" src="assets/cairn/en-quotes.webp" width="1600" height="1200" alt="Two points, each over the English W3C sentence it rests on, marked Verified word for word, with a link to read it at W3C." loading="lazy"><img data-l="zh" src="assets/cairn/zh-quotes.webp" width="1600" height="1200" alt="两个要点，各自下方是依据的英文原句，标有逐字核对通过和 W3C 链接。" loading="lazy"></div>
+            <figcaption><span data-l="en">Each point over the sentence it rests on, verified word for word.</span><span data-l="zh">每个要点下面是它依据的原句，逐字核对通过。</span></figcaption>
+          </figure>
+          <figure>
+            <div class="shot clear"><img data-l="en" src="assets/cairn/en-trace.webp" width="1600" height="1200" alt="The route panel: a table of the passages retrieved with rank, rerank score and why each is there." loading="lazy"><img data-l="zh" src="assets/cairn/zh-trace.webp" width="1600" height="1200" alt="路线面板：检索到的段落表，含名次、重排分和入选原因。" loading="lazy"></div>
+            <figcaption><span data-l="en">How this answer was made: every passage, its score, its reason.</span><span data-l="zh">这条回答是怎么来的：每一段、它的分数、入选原因。</span></figcaption>
+          </figure>
+          <figure>
+            <div class="shot clear"><img data-l="en" src="assets/cairn/en-library.webp" width="1600" height="1200" alt="The library: success criteria grouped by principle with level and passage count." loading="lazy"><img data-l="zh" src="assets/cairn/zh-library.webp" width="1600" height="1200" alt="资料库：按原则分组的成功标准，带级别和段落数。" loading="lazy"></div>
+            <figcaption><span data-l="en">The library: 87 criteria by principle, and the gaps.</span><span data-l="zh">资料库：按原则分组的 87 条标准，以及知识缺口。</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band" aria-labelledby="c-how">
+      <div class="container">
+        <div class="head">
+          <h2 id="c-how"><span data-l="en">How it works</span><span data-l="zh">怎么做到的</span></h2>
+          <p class="lead"><span data-l="en">Retrieval, then generation limited to what was retrieved, then verification in code. The last step is what makes the first two trustworthy.</span><span data-l="zh">先检索，再只根据检索结果生成，最后用代码核对。最后一步才让前两步可信。</span></p>
+        </div>
+        <svg class="diagram" viewBox="0 0 1224 190" role="img" aria-labelledby="c-diagram-title">
+          <title id="c-diagram-title">Pipeline: question, embed and retrieve, rerank, write, verify, answer</title>
+          <defs><marker id="c-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="oklch(50% 0.12 234)"/></marker></defs>
+          <g><rect class="d-box" x="2" y="30" width="180" height="128" rx="14"/><text class="d-n" x="22" y="64">1</text><text x="22" y="96" data-l="en">Question</text><text x="22" y="96" data-l="zh">提问</text><text class="d-sub" x="22" y="120" data-l="en">English or Chinese</text><text class="d-sub" x="22" y="120" data-l="zh">中文或英文</text></g>
+          <path class="d-arrow" d="M184 94h22" marker-end="url(#c-arrow)"/>
+          <g><rect class="d-box" x="210" y="30" width="180" height="128" rx="14"/><text class="d-n" x="230" y="64">2</text><text x="230" y="96" data-l="en">Embed, retrieve</text><text x="230" y="96" data-l="zh">向量检索</text><text class="d-sub" x="230" y="120" data-l="en">e5-small · 20 nearest</text><text class="d-sub" x="230" y="120" data-l="zh">e5-small · 最近 20 段</text><text class="d-sub" x="230" y="140" data-l="en">of 1006 passages</text><text class="d-sub" x="230" y="140" data-l="zh">共 1006 段</text></g>
+          <path class="d-arrow" d="M392 94h22" marker-end="url(#c-arrow)"/>
+          <g><rect class="d-box" x="418" y="30" width="180" height="128" rx="14"/><text class="d-n" x="438" y="64">3</text><text x="438" y="96" data-l="en">Rerank</text><text x="438" y="96" data-l="zh">重排序</text><text class="d-sub" x="438" y="120" data-l="en">bge-reranker · 6 kept</text><text class="d-sub" x="438" y="120" data-l="zh">bge-reranker · 保留 6 段</text><text class="d-sub" x="438" y="140" data-l="en">+ the rule text</text><text class="d-sub" x="438" y="140" data-l="zh">+ 条款正文</text></g>
+          <path class="d-arrow" d="M600 94h22" marker-end="url(#c-arrow)"/>
+          <g><rect class="d-box" x="626" y="30" width="180" height="128" rx="14"/><text class="d-n" x="646" y="64">4</text><text x="646" y="96" data-l="en">Write</text><text x="646" y="96" data-l="zh">写回答</text><text class="d-sub" x="646" y="120" data-l="en">Claude Haiku 5.5</text><text class="d-sub" x="646" y="120" data-l="zh">Claude Haiku 5.5</text><text class="d-sub" x="646" y="140" data-l="en">sources: an enum</text><text class="d-sub" x="646" y="140" data-l="zh">来源只能是枚举值</text></g>
+          <path class="d-arrow" d="M808 94h22" marker-end="url(#c-arrow)"/>
+          <g><rect class="d-box d-box--on" x="834" y="30" width="180" height="128" rx="14"/><text class="d-n" x="854" y="64">5</text><text x="854" y="96" data-l="en">Verify</text><text x="854" y="96" data-l="zh">逐字核对</text><text class="d-sub" x="854" y="120" data-l="en">every quote, word</text><text class="d-sub" x="854" y="120" data-l="zh">每条引文在原文里</text><text class="d-sub" x="854" y="140" data-l="en">for word, or withheld</text><text class="d-sub" x="854" y="140" data-l="zh">逐字找到，否则拦截</text></g>
+          <path class="d-arrow" d="M1016 94h22" marker-end="url(#c-arrow)"/>
+          <g><rect class="d-box" x="1042" y="30" width="180" height="128" rx="14"/><text class="d-n" x="1062" y="64">6</text><text x="1062" y="96" data-l="en">Answer</text><text x="1062" y="96" data-l="zh">回答</text><text class="d-sub" x="1062" y="120" data-l="en">facts marked, route</text><text class="d-sub" x="1062" y="120" data-l="zh">标出关键数字</text><text class="d-sub" x="1062" y="140" data-l="en">shown underneath</text><text class="d-sub" x="1062" y="140" data-l="zh">路线在下方展开</text></g>
+        </svg>
+        <ol class="steps">
+          <li><span class="d-n">1</span><strong><span data-l="en">Question</span><span data-l="zh">提问</span></strong><span class="small"><span data-l="en">English or Chinese</span><span data-l="zh">中文或英文</span></span></li>
+          <li><span class="d-n">2</span><strong><span data-l="en">Embed and retrieve</span><span data-l="zh">向量检索</span></strong><span class="small"><span data-l="en">e5-small; the 20 nearest of 1006 passages</span><span data-l="zh">e5-small，1006 段里最近的 20 段</span></span></li>
+          <li><span class="d-n">3</span><strong><span data-l="en">Rerank</span><span data-l="zh">重排序</span></strong><span class="small"><span data-l="en">bge-reranker; 6 kept, plus the rule text</span><span data-l="zh">bge-reranker，保留 6 段，再补条款正文</span></span></li>
+          <li><span class="d-n">4</span><strong><span data-l="en">Write</span><span data-l="zh">写回答</span></strong><span class="small"><span data-l="en">Claude Haiku 5.5; sources limited to an enum of the retrieved ids</span><span data-l="zh">Claude Haiku 5.5，来源只能是检索到的段落 id</span></span></li>
+          <li><span class="d-n">5</span><strong><span data-l="en">Verify</span><span data-l="zh">逐字核对</span></strong><span class="small"><span data-l="en">every quote found word for word, or the answer is withheld</span><span data-l="zh">每条引文逐字找到，否则拦截</span></span></li>
+          <li><span class="d-n">6</span><strong><span data-l="en">Answer</span><span data-l="zh">回答</span></strong><span class="small"><span data-l="en">key facts marked, the route shown underneath</span><span data-l="zh">标出关键数字，路线在下方展开</span></span></li>
+        </ol>
+        <div class="rows rows--loose" style="margin-top:var(--space-2xl)">
+          <div class="row">
+            <h3><span data-l="en">Grounding as a mechanism</span><span data-l="zh">把"有依据"做成机制</span></h3>
+            <p><span data-l="en">The model’s structured output has a <code>source_id</code> field whose allowed values are exactly the retrieved passage ids, so it cannot cite a source it was not given. The server then looks for every quote in its passage, and the criteria shown come only from verified quotes.</span><span data-l="zh">模型结构化输出里的 <code>source_id</code> 字段，允许值就是这次检索到的段落 id，它引不了没给过它的来源。服务器再把每条引文在原段落里查找，显示的条款只来自核对通过的引文。</span></p>
+          </div>
+          <div class="row">
+            <h3><span data-l="en">Chinese questions, English text</span><span data-l="zh">中文问题，英文原文</span></h3>
+            <p><span data-l="en">A multilingual embedding model puts Chinese questions and English passages in one space, so nothing is translated. Keyword search found the right criterion for 6 of 40 questions; vectors found 28 at first position, and a local reranker lifted that to 32.</span><span data-l="zh">多语言向量模型把中文问题和英文段落放进同一个空间，不用翻译。关键词检索 40 道题只找对 6 道；向量第一名命中 28 道，本地重排序后提到 32 道。</span></p>
+          </div>
+          <div class="row">
+            <h3><span data-l="en">A bug the trace caught</span><span data-l="zh">路线面板抓到的一个 bug</span></h3>
+            <p><span data-l="en">Ten criteria have rule text split across passages. The first version kept only the last part, so the touch-target question never saw the sentence that says 24 by 24 CSS pixels. The retrieval trace exposed it; now every part is added.</span><span data-l="zh">有 10 条标准的正文被切成多段。第一版只补了最后一段，于是触控目标那题根本没看到写着 24×24 CSS 像素的那句。看检索路线才发现；现在每一段都会补进去。</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="c-measured">
+      <div class="container">
+        <div class="head">
+          <h2 id="c-measured"><span data-l="en">Measured</span><span data-l="zh">实测</span></h2>
+          <p class="lead"><span data-l="en">Retrieval over 40 questions written by the team (20 English, 20 Chinese), each labelled with the correct criterion. A method scores when that criterion is in its top 1, 3 or 5 passages.</span><span data-l="zh">检索评测用团队自拟的 40 道题（中英各 20），每题标出正确条款；条款进入某方法的前 1、3、5 名就算命中。</span></p>
+        </div>
+        <table class="results">
+          <thead><tr><th scope="col"><span data-l="en">Method</span><span data-l="zh">方法</span></th><th scope="col" class="num"><span data-l="en">Top 1</span><span data-l="zh">前 1</span></th><th scope="col" class="num"><span data-l="en">Top 3</span><span data-l="zh">前 3</span></th><th scope="col" class="num"><span data-l="en">Top 5</span><span data-l="zh">前 5</span></th><th scope="col" class="num">MRR@10</th></tr></thead>
+          <tbody>
+            <tr><td><span data-l="en">Keyword (BM25)</span><span data-l="zh">关键词（BM25）</span></td><td class="num">6 / 40</td><td class="num">10 / 40</td><td class="num">13 / 40</td><td class="num">0.21</td></tr>
+            <tr><td><span data-l="en">Vector</span><span data-l="zh">向量</span></td><td class="num">28 / 40</td><td class="num">38 / 40</td><td class="num">39 / 40</td><td class="num">0.82</td></tr>
+            <tr><td><span data-l="en">Hybrid, RRF fusion</span><span data-l="zh">混合，RRF 融合</span></td><td class="num">23 / 40</td><td class="num">37 / 40</td><td class="num">39 / 40</td><td class="num">0.75</td></tr>
+            <tr data-on><td><span data-l="en">Vector + rerank (in use)</span><span data-l="zh">向量 + 重排序（采用）</span></td><td class="num">32 / 40</td><td class="num">39 / 40</td><td class="num">39 / 40</td><td class="num">0.88</td></tr>
+            <tr><td><span data-l="en">RRF + rerank</span><span data-l="zh">RRF + 重排序</span></td><td class="num">31 / 40</td><td class="num">39 / 40</td><td class="num">39 / 40</td><td class="num">0.86</td></tr>
+          </tbody>
+        </table>
+        <table class="results">
+          <thead><tr><th scope="col"><span data-l="en">Check</span><span data-l="zh">检查</span></th><th scope="col"><span data-l="en">Result (9 November 2026)</span><span data-l="zh">结果（2026 年 11 月 9 日）</span></th></tr></thead>
+          <tbody>
+            <tr><td><span data-l="en">Smoke test, 7 live questions</span><span data-l="zh">冒烟测试，7 道实问</span></td><td><span data-l="en">7 of 7 requests succeeded: four answered with every quote verified, one not covered, one asked for a detail, one injection attempt answered with the real rule.</span><span data-l="zh">7 次请求全部成功：4 道回答且引文全部核对通过，1 道未覆盖，1 道要求补充细节，1 道注入攻击按真实条款回答。</span></td></tr>
+            <tr><td><span data-l="en">Cost per question</span><span data-l="zh">每题成本</span></td><td><span data-l="en">About 0.07 US cents (2936 input, 721 output tokens on average).</span><span data-l="zh">约 0.07 美分（平均输入 2936、输出 721 个 token）。</span></td></tr>
+            <tr><td><span data-l="en">Accessibility (axe-core 4.10)</span><span data-l="zh">无障碍（axe-core 4.10）</span></td><td><span data-l="en">0 violations: five pages, both languages, desktop and phone.</span><span data-l="zh">0 违规：5 个页面、中英文、电脑和手机。</span></td></tr>
+          </tbody>
+        </table>
+        <p class="small note"><span data-l="en">Measurements, not accuracy: retrieval only, team-written questions, no user testing yet.</span><span data-l="zh">是测量值不是准确率：只测检索，题目团队自拟，还没有用户测试。</span></p>
+      </div>
+    </section>
+
+    <section class="section section--band" aria-labelledby="c-learned">
+      <div class="container">
+        <div class="head"><h2 id="c-learned"><span data-l="en">What I learned, and the limits</span><span data-l="zh">学到的，和局限</span></h2></div>
+        <div class="rows rows--loose">
+          <div class="row">
+            <h3><span data-l="en">Learned</span><span data-l="zh">学到的</span></h3>
+            <ul>
+              <li><span data-l="en">Grounding has to be a mechanism, not a prompt: the enum and the server check did the work.</span><span data-l="zh">"有依据"必须是机制，不是提示词：枚举和服务器核对才是起作用的部分。</span></li>
+              <li><span data-l="en">Measure retrieval separately from generation; most wrong answers were retrieval misses.</span><span data-l="zh">检索和生成分开测；多数错误回答是检索没找对。</span></li>
+              <li><span data-l="en">Explain the subject before the product; the cover now teaches what WCAG is first.</span><span data-l="zh">先讲清对象再讲产品；封面现在先教 WCAG 是什么。</span></li>
+            </ul>
+          </div>
+          <div class="row">
+            <h3><span data-l="en">Limits</span><span data-l="zh">局限</span></h3>
+            <ul>
+              <li><span data-l="en">87 criteria and their Understanding documents only: no Techniques, no test rules.</span><span data-l="zh">只有 87 条标准和理解文档，没有技术文档和测试规则。</span></li>
+              <li><span data-l="en">An exact quote can still be misapplied. Read the criterion; this is not legal advice.</span><span data-l="zh">引文一字不差，回答仍可能用错。请读条款本身；这不是法律意见。</span></li>
+              <li><span data-l="en">The verifier rejects paraphrase, so some good answers are withheld, by choice.</span><span data-l="zh">核对器不接受改写，有些好回答会被拦下，这是有意的取舍。</span></li>
+              <li><span data-l="en">W3C text quoted unchanged under its licence.</span><span data-l="zh">W3C 原文依据其许可原样引用。</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="case-links">
+          <a class="btn btn--accent" href="https://jason-d-e.github.io/cairn/" rel="noreferrer"><span data-l="en">Open the demo</span><span data-l="zh">打开演示</span></a>
+          <a class="btn btn--clear" href="https://github.com/Jason-d-e/cairn" rel="noreferrer"><span data-l="en">Read the code and README</span><span data-l="zh">看代码和 README</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="More work">
+      <div class="container prevnext">
+        <a class="clear" href="./#work"><span class="small"><span data-l="en">Back</span><span data-l="zh">返回</span></span><span class="index-name"><span data-l="en">All work</span><span data-l="zh">全部作品</span></span></a>
+        <a class="clear" href="tracedesk.html"><span class="small"><span data-l="en">Next</span><span data-l="zh">下一个</span></span><span class="index-name">TraceDesk Lite</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="small"><span data-l="en">© 2026 Liang Liyuan. Built with the Refract theme of the Hallmark design skill (MIT), set in Funnel Display and Funnel Sans (OFL) with Noto Sans SC for Chinese.</span><span data-l="zh">© 2026 Liang Liyuan。使用 Hallmark 设计 skill 的 Refract 主题（MIT），字体为 Funnel Display、Funnel Sans（OFL）和中文的 Noto Sans SC。</span></p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Jason-d-e" rel="me noreferrer">GitHub</a>
+        <a href="https://github.com/Jason-d-e/Jason-d-e.github.io" rel="noreferrer"><span data-l="en">Source of this site</span><span data-l="zh">本站源码</span></a>
+      </div>
+    </div>
+  </footer>
+  <script src="site.js" defer></script>
+</body>
+</html>
