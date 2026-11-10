@@ -208,3 +208,7 @@ table.results { width: 100%; border-collapse: collapse; margin-top: var(--space-
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
 }
+
+/* The demo video poster is a link around an image. */
+.case-shot a.shot { display: block; }
+.case-shot a.shot + .case-note, .case-shot a.shot ~ .case-note { margin-top: var(--space-sm); }
