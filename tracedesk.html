@@ -45,7 +45,7 @@
       <div class="actions">
         <a class="btn btn--accent" href="https://github.com/Jason-d-e/tracedesk-lite" rel="noreferrer"><span data-l="en">Source on GitHub</span><span data-l="zh">GitHub 源码</span></a>
       </div>
-      <p class="small case-note"><span data-l="en">Runs on your own machine with one model key; the demo documents are fictional.</span><span data-l="zh">在自己电脑上运行，只需一个模型密钥；演示文档是虚构的。</span></p>
+      <p class="small case-note"><span data-l="en">Runs on your own machine, with or without a model key; the demo documents are fictional.</span><span data-l="zh">在自己电脑上运行，有没有模型密钥都能用；演示文档是虚构的。</span></p>
     </header>
 
     <div class="container case-shot">
@@ -69,6 +69,8 @@
             <ul>
               <li><span data-l="en">Every answer in the same order: status, the bottom line in large type, a checklist you can tick, folded detail, evidence.</span><span data-l="zh">每条回答同一顺序：状态、大字结论、可勾选清单、折叠详情、证据。</span></li>
               <li><span data-l="en">Every number in a deadline must appear in that step’s verified quote, in either language.</span><span data-l="zh">截止日期里的每个数字都必须出现在该步骤已核对的引文里，中英文皆然。</span></li>
+              <li><span data-l="en">No AI key is needed. A rule-based engine answers with the document’s own sentence and turns its instruction into a checklist step; with a key, you can switch between the two.</span><span data-l="zh">不接 AI 也能回答。一个基于规则的引擎用文档里的原句作答，并把其中的做法变成一个清单步骤；有密钥时可以在两种回答之间切换。</span></li>
+              <li><span data-l="en">When the documents do not answer, it drafts an email to the support address the documents give; nothing is sent for you.</span><span data-l="zh">文档答不上时，起草一封发给文档里写明的求助邮箱的邮件，不会替你发送。</span></li>
               <li><span data-l="en">Reading settings: focus mode, text size, bold word starts, read-aloud, light or dark.</span><span data-l="zh">阅读设置：专注模式、字号、词首加粗、朗读、浅色或深色。</span></li>
               <li><span data-l="en">An organiser dashboard: reader reports, knowledge gaps, document versions, the prompt comparison.</span><span data-l="zh">组织者仪表盘：读者报告、知识缺口、文档版本、提示词对比。</span></li>
             </ul>
@@ -130,6 +132,10 @@
             <p><span data-l="en">Two prompts, same model, documents and server checks, 40 questions. Both passed quote verification; the difference was deadlines the plain prompt invented. Held-out set: TraceDesk prompt 20 of 20, plain prompt 17 of 20.</span><span data-l="zh">两个提示词，同样的模型、文档和服务器核对，40 道题。引文核对两者都满分，差别在普通提示词编出来的截止日期。留出题：TraceDesk 提示词 20/20，普通提示词 17/20。</span></p>
           </div>
           <div class="row">
+            <h3><span data-l="en">Answering without a model</span><span data-l="zh">不用模型也能答</span></h3>
+            <p><span data-l="en">The local engine works the way early assistants did. It takes the key words of the question, with a small glossary for Chinese, scores every sentence of the current documents, and shows the best one as the bottom line. When that sentence carries an instruction and a deadline, it becomes a checklist step with the deadline beside it. No model, no cost, and every word is the document’s own.</span><span data-l="zh">本地引擎的做法和早期的助手一样：取出问题里的关键词（中文靠一张小词表对应到英文），给当前文档的每句话打分，最高的一句做结论。这句话里带做法和截止日期时，它就变成一个清单步骤，日期标在旁边。不调模型，不花钱，每个字都是文档自己的。</span></p>
+          </div>
+          <div class="row">
             <h3><span data-l="en">Evaluate your own checker</span><span data-l="zh">也要评测自己的核对器</span></h3>
             <p><span data-l="en">Two early failures were our own bugs: the deadline check compared digits only and flagged a correct Chinese date, and a refusal quoting an injected “capacity 999” was marked as a failure.</span><span data-l="zh">最早的两个失败是我们自己的 bug：日期核对只比数字，把正确的中文日期标红；一次拒绝注入时提到"容量 999"，被判成失败。</span></p>
           </div>
@@ -156,6 +162,7 @@
             <tr><td><span data-l="en">Median and maximum response time</span><span data-l="zh">响应时间中位数和最大值</span></td><td><span data-l="en">3.4 s median, 10.6 s maximum</span><span data-l="zh">中位数 3.4 秒，最大 10.6 秒</span></td></tr>
             <tr><td><span data-l="en">Total cost of all 214 calls</span><span data-l="zh">214 次调用总花费</span></td><td><span data-l="en">about US$0.13</span><span data-l="zh">约 0.13 美元</span></td></tr>
             <tr><td><span data-l="en">Prompt comparison, 20 held-out questions</span><span data-l="zh">提示词对比，20 道留出题</span></td><td><span data-l="en">TraceDesk prompt 20 / 20, plain prompt 17 / 20 on all automatic checks; about 40% more tokens and 1.6 s slower per question.</span><span data-l="zh">TraceDesk 提示词 20/20，普通提示词 17/20 通过全部自动检查；每题多约 40% 的 token、慢约 1.6 秒。</span></td></tr>
+            <tr><td><span data-l="en">Local engine, 34 demo questions (10 November 2026)</span><span data-l="zh">本地引擎，34 道演示题（2026 年 11 月 10 日）</span></td><td><span data-l="en">Picked the right sentence for 29, asked back on 2 and said not covered on 3, with no model call.</span><span data-l="zh">29 道选对了原句，2 道反问，3 道答未覆盖，全程没有调用模型。</span></td></tr>
             <tr><td><span data-l="en">Accessibility (axe-core 4.10)</span><span data-l="zh">无障碍（axe-core 4.10）</span></td><td><span data-l="en">0 violations on the cover, the help desk with an answer, and all five dashboard sections; both languages, light and dark, desktop and phone.</span><span data-l="zh">封面、带回答的帮助台、仪表盘五个板块均 0 违规；中英文、浅深色、电脑和手机。</span></td></tr>
           </tbody>
         </table>
@@ -171,6 +178,7 @@
             <ul>
               <li><span data-l="en">No user testing yet: designed with cognitive-accessibility guidance, not proven to help.</span><span data-l="zh">还没有用户测试：按认知无障碍指南设计，不是被证明有效。</span></li>
               <li><span data-l="en">The quote check proves the text exists, not that it supports the sentence.</span><span data-l="zh">引文核对证明原文里有这句，不证明它支持结论。</span></li>
+              <li><span data-l="en">The local engine matches words, not meaning: it cannot combine two sections, and a phrasing its glossary does not know comes back as not covered.</span><span data-l="zh">本地引擎比对的是词，不是意思：它不会把两个章节合起来，词表里没有的说法会被答成未覆盖。</span></li>
               <li><span data-l="en">Four short fictional documents; nothing here measures accuracy on real material.</span><span data-l="zh">四份简短的虚构文档；这里没有任何数字衡量真实材料上的准确率。</span></li>
               <li><span data-l="en">A local single-user prototype: no accounts, no public deployment, no dashboard login.</span><span data-l="zh">本地单用户原型：没有账号、没有公网部署、仪表盘没有登录。</span></li>
             </ul>

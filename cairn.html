@@ -46,7 +46,7 @@
         <a class="btn btn--accent" href="https://jason-d-e.github.io/cairn/" rel="noreferrer"><span data-l="en">Live demo</span><span data-l="zh">在线演示</span></a>
         <a class="btn btn--clear" href="https://github.com/Jason-d-e/cairn" rel="noreferrer"><span data-l="en">Source on GitHub</span><span data-l="zh">GitHub 源码</span></a>
       </div>
-      <p class="small case-note"><span data-l="en">The demo is static: it shows fourteen real answers recorded on 10 November 2026 and cannot answer new questions. Cairn is unofficial and not affiliated with Monash University.</span><span data-l="zh">演示是静态版：展示 2026 年 11 月 10 日记录的 14 条真实回答，不能回答新问题。Cairn 是非官方项目，与 Monash University 无关。</span></p>
+      <p class="small case-note"><span data-l="en">The demo is static: fourteen real questions, each answered by both engines and recorded on 10 November 2026. It cannot answer new ones. Cairn is unofficial and not affiliated with Monash University.</span><span data-l="zh">演示是静态版：14 道真实问题，两种引擎各答一遍，记录于 2026 年 11 月 10 日，不能回答新问题。Cairn 是非官方项目，与 Monash University 无关。</span></p>
     </header>
 
     <div class="container case-shot">
@@ -71,6 +71,8 @@
               <li><span data-l="en">You pick your campus first. Shared pages are always searched; your campus adds its own.</span><span data-l="zh">先选校区。通用页面始终会搜，再加上你校区自己的页面。</span></li>
               <li><span data-l="en">The bottom line in one or two sentences, deadlines marked, the page and its campus as a pill.</span><span data-l="zh">一两句话结论，截止时间标出，页面和适用校区列成胶囊。</span></li>
               <li><span data-l="en">Every point rests on a sentence from the page the server has found word for word; if none is found, no answer.</span><span data-l="zh">每个要点都落在服务器逐字找到的原句上；一句都找不到就不显示回答。</span></li>
+              <li><span data-l="en">No AI key is needed. A second engine answers with the page’s own sentences and never rewrites them; with a key, you can switch between the two on the same question.</span><span data-l="zh">不接 AI 也能回答。第二个引擎直接用页面里的原句作答，一个字不改；有密钥时，同一题可以在两种回答之间切换。</span></li>
+              <li><span data-l="en">When the pages do not answer, it drafts the email you would send to the department. You copy it or open it in a mail app; nothing is sent for you.</span><span data-l="zh">页面答不上时，替你起草一封问相关部门的邮件。复制或在邮件应用里打开，不会替你发送。</span></li>
               <li><span data-l="en">The route under every answer, and a library of all 58 pages by topic that keeps every question it could not answer.</span><span data-l="zh">每条回答下方的路线，以及按主题列出 58 个页面、记下每个答不上来的问题的资料库。</span></li>
             </ul>
           </div>
@@ -131,6 +133,10 @@
             <p><span data-l="en">The model’s structured output has a <code>source_id</code> field whose allowed values are exactly the retrieved passage ids, so it cannot cite a source it was not given. The server then looks for every quote in its passage, and the pages shown come only from verified quotes.</span><span data-l="zh">模型结构化输出里的 <code>source_id</code> 字段，允许值就是这次检索到的段落 id，它引不了没给过它的来源。服务器再把每条引文在原段落里查找，显示的页面只来自核对通过的引文。</span></p>
           </div>
           <div class="row">
+            <h3><span data-l="en">Answering without a model</span><span data-l="zh">不用模型也能答</span></h3>
+            <p><span data-l="en">Before large language models, assistants answered by finding the best sentence and showing it. The local engine does that: it takes the same retrieved passages, splits them into sentences, scores each against the question with the reranker already on the machine, and shows the best one as the bottom line with the next three as points. The answer is the quote, so it costs nothing and replies in one to two seconds. Putting both engines on the same question also shows what the model adds: it combines conditions from several sentences, which one sentence cannot.</span><span data-l="zh">大语言模型出现之前，助手的做法是找到最合适的那句话再拿给你看。本地引擎就是这样：用同一批检索到的段落，切成句子，用机器上已有的重排模型给每句和问题打分，最高的一句做结论，后三句做要点。回答就是引文本身，所以不花钱，一两秒出结果。同一题两种引擎对比，也看得出模型多做了什么：它能把几句话里的条件合起来，单独一句话做不到。</span></p>
+          </div>
+          <div class="row">
             <h3><span data-l="en">Chinese questions, English pages</span><span data-l="zh">中文问题，英文页面</span></h3>
             <p><span data-l="en">A multilingual embedding model alone missed the deferral page for “I was sick on exam day”. Rendering the question in English before the search fixed it: Chinese questions went from 18 to 19 of 20 with the right page in the top five, and MRR from 0.69 to 0.86. The route panel shows the English search text, so nothing is hidden.</span><span data-l="zh">只靠多语言向量模型时，"考试那天病了能不能延期"没找到延期页。先把问题译成英文再检索就好了：中文题前五命中从 20 道里的 18 道到 19 道，MRR 从 0.69 到 0.86。路线面板会显示那句英文检索词，不藏起来。</span></p>
           </div>
@@ -166,11 +172,12 @@
           <thead><tr><th scope="col"><span data-l="en">Check</span><span data-l="zh">检查</span></th><th scope="col"><span data-l="en">Result (10 November 2026)</span><span data-l="zh">结果（2026 年 11 月 10 日）</span></th></tr></thead>
           <tbody>
             <tr><td><span data-l="en">Smoke test, 7 live questions with campus</span><span data-l="zh">冒烟测试，7 道带校区的实问</span></td><td><span data-l="en">7 of 7 requests succeeded: four answered with every quote verified, one honestly not covered, one asked for a missing detail, one injection attempt (a false deadline) that the desk declined to confirm.</span><span data-l="zh">7 次请求全部成功：4 道回答且引文全部核对通过，1 道如实未覆盖，1 道要求补充细节，1 道注入攻击（谎称的截止时间）没有被认可。</span></td></tr>
+            <tr><td><span data-l="en">Local engine, the same 45 questions</span><span data-l="zh">本地引擎，同样的 45 道题</span></td><td><span data-l="en">Answered 41; the bottom line came from the right page in 26 of those. Five more questions the pages do not cover all came back as not covered.</span><span data-l="zh">回答了 41 道，其中 26 道的结论出自正确页面。另外 5 道页面没有覆盖的题，全部如实答未覆盖。</span></td></tr>
             <tr><td><span data-l="en">The library</span><span data-l="zh">资料库</span></td><td><span data-l="en">58 public pages, 747 passages, read on 9 November 2026; every answer links to its page.</span><span data-l="zh">58 个公开页面、747 个段落，2026 年 11 月 9 日读取；每条回答都链接到原页。</span></td></tr>
             <tr><td><span data-l="en">Accessibility (axe-core 4.10)</span><span data-l="zh">无障碍（axe-core 4.10）</span></td><td><span data-l="en">0 violations: five pages, both languages, desktop and phone.</span><span data-l="zh">0 违规：5 个页面、中英文、电脑和手机。</span></td></tr>
           </tbody>
         </table>
-        <p class="small note"><span data-l="en">Measurements, not accuracy: retrieval only, team-written questions, no user testing yet.</span><span data-l="zh">是测量值不是准确率：只测检索，题目团队自拟，还没有用户测试。</span></p>
+        <p class="small note"><span data-l="en">Measurements, not accuracy: they count the right page, not the right wording. Team-written questions, no user testing yet.</span><span data-l="zh">是测量值不是准确率：数的是页面对不对，不是措辞对不对。题目团队自拟，还没有用户测试。</span></p>
       </div>
     </section>
 
@@ -192,6 +199,7 @@
               <li><span data-l="en">58 pages only: no unit guides, no faculty rules, nothing behind a login. Rules change; the desk shows what the pages said when read.</span><span data-l="zh">只有 58 个页面：没有单元指南、院系规定，没有登录后的内容。规定会变，问答台显示的是读取当时的说法。</span></li>
               <li><span data-l="en">An exact quote can still be misapplied, for example an Australian rule to a Malaysia student; the campus label is there so you can see it. Read the page, or ask Monash Connect.</span><span data-l="zh">引文一字不差，回答仍可能用错，比如把澳洲的规定答给马来西亚的学生；校区标签就是为了让你看出来。请读原页，或问 Monash Connect。</span></li>
               <li><span data-l="en">The verifier rejects paraphrase, so some good answers are withheld, by choice.</span><span data-l="zh">核对器不接受改写，有些好回答会被拦下，这是有意的取舍。</span></li>
+              <li><span data-l="en">The local engine shows one sentence at a time and cannot combine two rules. When its best sentence comes from the wrong page, you get an exact quote of the wrong rule; the page name beneath is how to tell.</span><span data-l="zh">本地引擎一次只给一句话，不会把两条规定合起来。最高分的句子出自错的页面时，你拿到的是一句一字不差、但不对题的原话，要靠下方的页面名来分辨。</span></li>
               <li><span data-l="en">Page text © Monash University, quoted in short excerpts with links; unofficial, not affiliated.</span><span data-l="zh">页面文字版权归 Monash University，仅短句摘录并附链接；非官方，无关联。</span></li>
             </ul>
           </div>
