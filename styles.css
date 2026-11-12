@@ -51,6 +51,8 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18e
 @media (hover: hover) and (pointer: fine) { .link:hover { color: var(--color-accent); text-decoration-color: var(--color-accent); } }
 img { max-width: 100%; height: auto; display: block; }
 section { scroll-margin-top: 88px; }
+/* Inline code in the case studies: the body face, as Cairn's own .cn-code; the browser's default monospace was a system font (NSimSun on Chinese Windows). */
+code { font-family: var(--font-body); font-weight: 500; font-variant-numeric: tabular-nums; color: var(--color-ink); }
 .fig { font-family: var(--font-display); font-weight: 300; font-variant-numeric: tabular-nums; color: var(--color-ink); }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 

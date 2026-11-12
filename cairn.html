@@ -144,7 +144,7 @@
         </ol>
         <div class="rows rows--loose" style="margin-top:var(--space-2xl)">
           <div class="row">
-            <h3><span data-l="en">Grounding as a mechanism</span><span data-l="zh">把"有依据"做成机制</span></h3>
+            <h3><span data-l="en">Grounding as a mechanism</span><span data-l="zh">把“有依据”做成机制</span></h3>
             <p><span data-l="en">The model’s structured output has a <code>source_id</code> field whose allowed values are exactly the retrieved passage ids, so it cannot cite a source it was not given. The server then looks for every quote in its passage, and the pages shown come only from verified quotes.</span><span data-l="zh">模型结构化输出里的 <code>source_id</code> 字段，允许值就是这次检索到的段落 id，它引不了没给过它的来源。服务器再把每条引文在原段落里查找，显示的页面只来自核对通过的引文。</span></p>
           </div>
           <div class="row">
@@ -153,7 +153,7 @@
           </div>
           <div class="row">
             <h3><span data-l="en">Chinese questions, English pages</span><span data-l="zh">中文问题，英文页面</span></h3>
-            <p><span data-l="en">A multilingual embedding model alone missed the deferral page for “I was sick on exam day”. Rendering the question in English before the search fixed it: Chinese questions went from 18 to 19 of 20 with the right page in the top five, and MRR from 0.69 to 0.86. The route panel shows the English search text, so nothing is hidden.</span><span data-l="zh">只靠多语言向量模型时，"考试那天病了能不能延期"没找到延期页。先把问题译成英文再检索就好了：中文题前五命中从 20 道里的 18 道到 19 道，MRR 从 0.69 到 0.86。路线面板会显示那句英文检索词，不藏起来。</span></p>
+            <p><span data-l="en">A multilingual embedding model alone missed the deferral page for “I was sick on exam day”. Rendering the question in English before the search fixed it: Chinese questions went from 18 to 19 of 20 with the right page in the top five, and MRR from 0.69 to 0.86. The route panel shows the English search text, so nothing is hidden.</span><span data-l="zh">只靠多语言向量模型时，“考试那天病了能不能延期”没找到延期页。先把问题译成英文再检索就好了：中文题前五命中从 20 道里的 18 道到 19 道，MRR 从 0.69 到 0.86。路线面板会显示那句英文检索词，不藏起来。</span></p>
           </div>
           <div class="row">
             <h3><span data-l="en">Three campuses, one filter</span><span data-l="zh">三个校区，一个过滤</span></h3>
@@ -205,7 +205,7 @@
             <h3><span data-l="en">Learned</span><span data-l="zh">学到的</span></h3>
             <ul>
               <li><span data-l="en">Pick the corpus by need, not by licence. The first corpus was WCAG 2.2: clean to license, and nobody needed it. The mechanism stayed; the corpus went.</span><span data-l="zh">按需求选资料，不是按许可证。第一版装的是 WCAG 2.2：许可干净，没人需要。机制留下，资料换掉。</span></li>
-              <li><span data-l="en">Grounding has to be a mechanism, not a prompt: the enum and the server check did the work.</span><span data-l="zh">"有依据"必须是机制，不是提示词：枚举和服务器核对才是起作用的部分。</span></li>
+              <li><span data-l="en">Grounding has to be a mechanism, not a prompt: the enum and the server check did the work.</span><span data-l="zh">“有依据”必须是机制，不是提示词：枚举和服务器核对才是起作用的部分。</span></li>
               <li><span data-l="en">Measure retrieval separately and read the misses; the translation fix came from the trace of one bad answer.</span><span data-l="zh">检索单独测，并且去看没命中的题；翻译这一步是从一条坏回答的路线里看出来的。</span></li>
             </ul>
           </div>
