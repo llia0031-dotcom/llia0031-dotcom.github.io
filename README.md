@@ -10,6 +10,8 @@ Plain HTML, CSS and a little JavaScript, served by GitHub Pages. English first, 
 - `cairn.html`: Cairn, a bilingual WCAG 2.2 knowledge desk on retrieval (LaunchPad Hacks 2026).
 - `tracedesk.html`: TraceDesk Lite, an ADHD-friendly help desk with verified quotes (Ctrl+V Hackathon 2026).
 
+The home page also links to [Text on Product](https://jason-d-e.github.io/text-on-product/) ([source](https://github.com/Jason-d-e/text-on-product)), tips and a line by line checker for Chinese text on product images.
+
 ## Credits
 
 - Visual system: the "Refract" theme of the [Hallmark](https://github.com/hallmark-design/hallmark) design skill (MIT).
