@@ -1,230 +1,25 @@
 <!doctype html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <meta name="description" content="TraceDesk Lite: an ADHD-friendly help desk. The bottom line first, a checklist you can tick, and a source for every word, checked before it is shown. A case study by Liang Liyuan.">
-  <title data-en="TraceDesk Lite · Liang Liyuan" data-zh="TraceDesk Lite · Liang Liyuan">TraceDesk Lite · Liang Liyuan</title>
-  <script>try{if(localStorage.getItem('site-lang')==='zh'){document.documentElement.setAttribute('data-lang','zh');document.documentElement.lang='zh-CN'}}catch(e){}</script>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500&family=Funnel+Sans:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TraceDesk Lite · Liang Liyuan</title>
+<link rel="canonical" href="https://jason-d-e.github.io/en/work/tracedesk/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script>
+// This address used to hold the earlier case study of TraceDesk Lite. The project's page is now part of the portfolio:
+// in Chinese for a reader who had chosen Chinese here or whose browser is set to Chinese, in English otherwise.
+(function () {
+  var zh = false
+  try { zh = localStorage.getItem('site-lang') === 'zh' } catch (e) {}
+  if (!zh) zh = /^zh/i.test(navigator.language || '')
+  location.replace(zh ? '/work/tracedesk/' : '/en/work/tracedesk/')
+})()
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=/en/work/tracedesk/"></noscript>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0c0a07;color:#f1efe9;font:16px/1.6 system-ui,sans-serif}a{color:#d9f24b}</style>
 </head>
 <body>
-  <header class="bar">
-    <div class="container bar-inner">
-      <a class="wordmark" href="./">Liang Liyuan</a>
-      <nav class="nav" aria-label="Site">
-        <a href="./#work" aria-current="page"><span data-l="en">Work</span><span data-l="zh">作品</span></a>
-        <a href="./#about"><span data-l="en">About</span><span data-l="zh">关于</span></a>
-      </nav>
-      <div class="lang" role="group" aria-label="Language / 语言">
-        <button type="button" data-lang="zh" aria-pressed="false">中文</button>
-        <button type="button" data-lang="en" aria-pressed="true">EN</button>
-      </div>
-      <a class="btn btn--accent" href="https://github.com/Jason-d-e" rel="me noreferrer">GitHub</a>
-    </div>
-  </header>
-
-  <main>
-    <header class="container case-head">
-      <h1>TraceDesk Lite</h1>
-      <p class="lead">
-        <span data-l="en">A help desk for student organisations, designed for readers who find dense text hard to act on. One sentence first, then a checklist you can tick, then the evidence. Every quote and every deadline is checked against the documents before it is shown.</span>
-        <span data-l="zh">给学生社团用的帮助台，为读不动长段落的读者设计。先一句结论，再一份可勾选的清单，最后是证据。每条引文和每个截止日期都先和文档核对再显示。</span>
-      </p>
-      <ul class="meta" aria-label="Project facts">
-        <li class="pill pill--soft">Ctrl+V Hackathon 2026</li>
-        <li class="pill"><span data-l="en">3 to 10 November 2026</span><span data-l="zh">2026 年 11 月 3 至 10 日</span></li>
-        <li class="pill"><span data-l="en">Team: Liang Liyuan, ZIzi821</span><span data-l="zh">团队：Liang Liyuan、ZIzi821</span></li>
-        <li class="pill">Node.js, React, Claude Haiku 5.5</li>
-      </ul>
-      <div class="actions">
-        <a class="btn btn--accent" href="https://github.com/Jason-d-e/tracedesk-lite" rel="noreferrer"><span data-l="en">Source on GitHub</span><span data-l="zh">GitHub 源码</span></a>
-      </div>
-      <p class="small case-note"><span data-l="en">Runs on your own machine, with or without a model key.</span><span data-l="zh">在自己电脑上运行，有没有模型密钥都能用。</span></p>
-    </header>
-
-    <div class="container case-shot">
-      <div class="shot clear clear--lead">
-        <img data-l="en" src="assets/tracedesk/hero-en.jpg" width="1440" height="900" alt="The TraceDesk Lite cover on warm paper: a real rule underlined, an index card with the one-sentence answer, a ticked checklist step and a Quote verified stamp." loading="eager" fetchpriority="high">
-        <img data-l="zh" src="assets/tracedesk/hero-zh.jpg" width="1440" height="900" alt="TraceDesk Lite 封面，暖色纸面：一条真实规则被划线，一张索引卡写着一句话结论，一个清单步骤被勾选，盖着"引文已核对"的章。" loading="eager">
-      </div>
-    </div>
-
-    <div class="container case-shot">
-      <a class="shot clear" data-l="en" href="https://youtu.be/eEHcymuLP58" rel="noreferrer">
-        <picture>
-          <source media="(prefers-reduced-motion: reduce)" srcset="assets/tracedesk/poster.jpg">
-          <img src="assets/tracedesk/opening.webp" width="960" height="540" alt="The TraceDesk Lite cover drawn in text characters: the name in block letters, a shield with a tick, and the line “Read less. Never be misled.” One shape then becomes a button, a loader, an answer card, a checklist and a chart. Opens the three-minute demo video." loading="lazy">
-        </picture>
-      </a>
-      <a class="shot clear" data-l="zh" href="https://youtu.be/eEHcymuLP58" rel="noreferrer">
-        <picture>
-          <source media="(prefers-reduced-motion: reduce)" srcset="assets/tracedesk/poster.jpg">
-          <img src="assets/tracedesk/opening.webp" width="960" height="540" alt="用字符画绘制的 TraceDesk Lite 封面：方块字的名称、带对勾的盾牌和口号。之后一个形状依次变成按钮、加载圈、答案卡、清单和图表。点击打开三分钟的演示视频。" loading="lazy">
-        </picture>
-      </a>
-      <p class="small case-note"><span data-l="en">Demo video, 3 min 13 s.</span><span data-l="zh">演示视频，3 分 13 秒。</span></p>
-    </div>
-
-    <section class="section" aria-labelledby="t-problem" style="padding-top:0">
-      <div class="container">
-        <div class="rows rows--loose">
-          <div class="row">
-            <h2 class="as-h3" id="t-problem"><span data-l="en">The problem</span><span data-l="zh">问题</span></h2>
-            <div>
-              <p><span data-l="en">Practical student information sits in dense English documents. For readers with ADHD or other attention difficulties, and for second-language readers, long paragraphs are hard to finish and a deadline buried mid-sentence is easy to miss. An AI summary helps only if it never invents or shifts a deadline.</span><span data-l="zh">学生要用的实际信息埋在大段英文里。对有 ADHD 或其他注意力困难的读者和第二语言读者，长段落读不完，藏在句中的截止日期容易漏。AI 摘要只有在绝不编造或改动截止日期时才算帮忙。</span></p>
-            </div>
-          </div>
-          <div class="row">
-            <h2 class="as-h3"><span data-l="en">What it does</span><span data-l="zh">它做什么</span></h2>
-            <ul>
-              <li><span data-l="en">Every answer in the same order: status, the bottom line in large type, a checklist you can tick, folded detail, evidence.</span><span data-l="zh">每条回答同一顺序：状态、大字结论、可勾选清单、折叠详情、证据。</span></li>
-              <li><span data-l="en">Every number in a deadline must appear in that step’s verified quote, in either language.</span><span data-l="zh">截止日期里的每个数字都必须出现在该步骤已核对的引文里，中英文皆然。</span></li>
-              <li><span data-l="en">No AI key is needed. A rule-based engine answers with the document’s own sentence and turns its instruction into a checklist step; with a key, you can switch between the two.</span><span data-l="zh">不接 AI 也能回答。一个基于规则的引擎用文档里的原句作答，并把其中的做法变成一个清单步骤；有密钥时可以在两种回答之间切换。</span></li>
-              <li><span data-l="en">When the documents do not answer, it drafts an email to the support address the documents give; nothing is sent for you.</span><span data-l="zh">文档答不上时，起草一封发给文档里写明的求助邮箱的邮件，不会替你发送。</span></li>
-              <li><span data-l="en">Reading settings: focus mode, text size, bold word starts, read-aloud, light or dark.</span><span data-l="zh">阅读设置：专注模式、字号、词首加粗、朗读、浅色或深色。</span></li>
-              <li><span data-l="en">An organiser dashboard: reader reports, knowledge gaps, document versions, the prompt comparison.</span><span data-l="zh">组织者仪表盘：读者报告、知识缺口、文档版本、提示词对比。</span></li>
-            </ul>
-          </div>
-        </div>
-        <div class="gallery">
-          <figure>
-            <div class="shot clear"><img data-l="en" src="assets/tracedesk/en-answer.webp" width="1600" height="1200" alt="An answer in the help desk: the status banner, the bottom line with highlighted facts, and the first checklist steps with deadline labels." loading="lazy"><img data-l="zh" src="assets/tracedesk/zh-answer.webp" width="1600" height="1200" alt="帮助台里的一条回答：状态横幅、高亮关键信息的一句话结论、带截止日期标签的清单步骤。" loading="lazy"></div>
-            <figcaption><span data-l="en">The bottom line first, then a checklist with its deadlines.</span><span data-l="zh">先给结论，再给带截止日期的清单。</span></figcaption>
-          </figure>
-          <figure>
-            <div class="shot clear"><img data-l="en" src="assets/tracedesk/en-focus.webp" width="1600" height="1200" alt="Focus mode: only the question and the answer remain on screen, at a large text size." loading="lazy"><img data-l="zh" src="assets/tracedesk/zh-focus.webp" width="1600" height="1200" alt="专注模式：屏幕上只剩问题和回答，字号放大。" loading="lazy"></div>
-            <figcaption><span data-l="en">Focus mode hides everything but the answer.</span><span data-l="zh">专注模式只留下回答。</span></figcaption>
-          </figure>
-          <figure>
-            <div class="shot clear"><img data-l="en" src="assets/tracedesk/en-clarify.webp" width="1600" height="1200" alt="A clarifying question: the desk asks which of two meanings the reader intended instead of guessing." loading="lazy"><img data-l="zh" src="assets/tracedesk/zh-clarify.webp" width="1600" height="1200" alt="追问：问题有两种意思时，帮助台先问清楚而不是猜。" loading="lazy"></div>
-            <figcaption><span data-l="en">When a question is ambiguous it asks back instead of guessing.</span><span data-l="zh">问题有歧义时反问，不猜。</span></figcaption>
-          </figure>
-          <figure>
-            <div class="shot clear"><img data-l="en" src="assets/tracedesk/en-dashboard.webp" width="1600" height="1200" alt="The organiser dashboard overview: questions asked, share answered from the documents, open reports, and charts of outcomes and missing information." loading="lazy"><img data-l="zh" src="assets/tracedesk/zh-dashboard.webp" width="1600" height="1200" alt="组织者仪表盘概览：提问数、从文档答出的比例、待处理报告，以及结果和缺失信息的图表。" loading="lazy"></div>
-            <figcaption><span data-l="en">The organiser dashboard: what readers asked, what the documents lack.</span><span data-l="zh">组织者仪表盘：读者问了什么，文档缺什么。</span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--band" aria-labelledby="t-how">
-      <div class="container">
-        <div class="head">
-          <h2 id="t-how"><span data-l="en">How it works</span><span data-l="zh">怎么做到的</span></h2>
-          <p class="lead"><span data-l="en">One model call over the current documents, structured output, and a server that refuses to show anything it cannot find in the source.</span><span data-l="zh">对当前文档做一次模型调用，结构化输出，服务器拒绝显示任何在原文里找不到的内容。</span></p>
-        </div>
-        <svg class="diagram" viewBox="0 0 1224 190" role="img" aria-labelledby="t-diagram-title">
-          <title id="t-diagram-title">Pipeline: question, current documents, write, verify, numbered answer, reports to organisers</title>
-          <defs><marker id="t-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="oklch(50% 0.12 234)"/></marker></defs>
-          <g><rect class="d-box" x="2" y="30" width="180" height="128" rx="14"/><text class="d-n" x="22" y="64">1</text><text x="22" y="96" data-l="en">Question</text><text x="22" y="96" data-l="zh">提问</text><text class="d-sub" x="22" y="120" data-l="en">English or Chinese</text><text class="d-sub" x="22" y="120" data-l="zh">中文或英文</text></g>
-          <path class="d-arrow" d="M184 94h22" marker-end="url(#t-arrow)"/>
-          <g><rect class="d-box" x="210" y="30" width="180" height="128" rx="14"/><text class="d-n" x="230" y="64">2</text><text x="230" y="96" data-l="en">Current documents</text><text x="230" y="96" data-l="zh">当前文档</text><text class="d-sub" x="230" y="120" data-l="en">active sections only;</text><text class="d-sub" x="230" y="120" data-l="zh">只用现行章节，</text><text class="d-sub" x="230" y="140" data-l="en">drafts never sent</text><text class="d-sub" x="230" y="140" data-l="zh">过期草稿不发给模型</text></g>
-          <path class="d-arrow" d="M392 94h22" marker-end="url(#t-arrow)"/>
-          <g><rect class="d-box" x="418" y="30" width="180" height="128" rx="14"/><text class="d-n" x="438" y="64">3</text><text x="438" y="96" data-l="en">Write</text><text x="438" y="96" data-l="zh">写回答</text><text class="d-sub" x="438" y="120" data-l="en">Claude Haiku 5.5</text><text class="d-sub" x="438" y="120" data-l="zh">Claude Haiku 5.5</text><text class="d-sub" x="438" y="140" data-l="en">structured JSON</text><text class="d-sub" x="438" y="140" data-l="zh">结构化 JSON</text></g>
-          <path class="d-arrow" d="M600 94h22" marker-end="url(#t-arrow)"/>
-          <g><rect class="d-box d-box--on" x="626" y="30" width="180" height="128" rx="14"/><text class="d-n" x="646" y="64">4</text><text x="646" y="96" data-l="en">Verify</text><text x="646" y="96" data-l="zh">核对</text><text class="d-sub" x="646" y="120" data-l="en">quotes word for word;</text><text class="d-sub" x="646" y="120" data-l="zh">引文逐字核对；</text><text class="d-sub" x="646" y="140" data-l="en">every deadline number</text><text class="d-sub" x="646" y="140" data-l="zh">截止日期逐个数字核对</text></g>
-          <path class="d-arrow" d="M808 94h22" marker-end="url(#t-arrow)"/>
-          <g><rect class="d-box" x="834" y="30" width="180" height="128" rx="14"/><text class="d-n" x="854" y="64">5</text><text x="854" y="96" data-l="en">Numbered answer</text><text x="854" y="96" data-l="zh">编号版式的回答</text><text class="d-sub" x="854" y="120" data-l="en">bottom line, checklist,</text><text class="d-sub" x="854" y="120" data-l="zh">结论、清单、</text><text class="d-sub" x="854" y="140" data-l="en">evidence</text><text class="d-sub" x="854" y="140" data-l="zh">证据</text></g>
-          <path class="d-arrow" d="M1016 94h22" marker-end="url(#t-arrow)"/>
-          <g><rect class="d-box" x="1042" y="30" width="180" height="128" rx="14"/><text class="d-n" x="1062" y="64">6</text><text x="1062" y="96" data-l="en">Report, review</text><text x="1062" y="96" data-l="zh">报告与复核</text><text class="d-sub" x="1062" y="120" data-l="en">reader reports, gaps,</text><text class="d-sub" x="1062" y="120" data-l="zh">读者报告、知识缺口、</text><text class="d-sub" x="1062" y="140" data-l="en">CSV for organisers</text><text class="d-sub" x="1062" y="140" data-l="zh">给组织者的 CSV</text></g>
-        </svg>
-        <ol class="steps">
-          <li><span class="d-n">1</span><strong><span data-l="en">Question</span><span data-l="zh">提问</span></strong><span class="small"><span data-l="en">English or Chinese</span><span data-l="zh">中文或英文</span></span></li>
-          <li><span class="d-n">2</span><strong><span data-l="en">Current documents</span><span data-l="zh">当前文档</span></strong><span class="small"><span data-l="en">active sections only; superseded drafts are never sent</span><span data-l="zh">只用现行章节，过期草稿不发给模型</span></span></li>
-          <li><span class="d-n">3</span><strong><span data-l="en">Write</span><span data-l="zh">写回答</span></strong><span class="small"><span data-l="en">Claude Haiku 5.5, structured JSON</span><span data-l="zh">Claude Haiku 5.5，结构化 JSON</span></span></li>
-          <li><span class="d-n">4</span><strong><span data-l="en">Verify</span><span data-l="zh">核对</span></strong><span class="small"><span data-l="en">quotes word for word; every number in each deadline</span><span data-l="zh">引文逐字核对，截止日期逐个数字核对</span></span></li>
-          <li><span class="d-n">5</span><strong><span data-l="en">Numbered answer</span><span data-l="zh">编号版式的回答</span></strong><span class="small"><span data-l="en">bottom line, checklist, evidence</span><span data-l="zh">结论、清单、证据</span></span></li>
-          <li><span class="d-n">6</span><strong><span data-l="en">Report and review</span><span data-l="zh">报告与复核</span></strong><span class="small"><span data-l="en">reader reports, knowledge gaps, CSV for organisers</span><span data-l="zh">读者报告、知识缺口、给组织者的 CSV</span></span></li>
-        </ol>
-        <div class="rows rows--loose" style="margin-top:var(--space-2xl)">
-          <div class="row">
-            <h3><span data-l="en">A check in code beats a promise in a prompt</span><span data-l="zh">代码里的核对胜过提示词里的承诺</span></h3>
-            <p><span data-l="en">Two prompts, same model, documents and server checks, 40 questions. Both passed quote verification; the difference was deadlines the plain prompt invented. Held-out set: TraceDesk prompt 20 of 20, plain prompt 17 of 20.</span><span data-l="zh">两个提示词，同样的模型、文档和服务器核对，40 道题。引文核对两者都满分，差别在普通提示词编出来的截止日期。留出题：TraceDesk 提示词 20/20，普通提示词 17/20。</span></p>
-          </div>
-          <div class="row">
-            <h3><span data-l="en">Answering without a model</span><span data-l="zh">不用模型也能答</span></h3>
-            <p><span data-l="en">The local engine works the way early assistants did. It takes the key words of the question, with a small glossary for Chinese, scores every sentence of the current documents, and shows the best one as the bottom line. When that sentence carries an instruction and a deadline, it becomes a checklist step with the deadline beside it. No model, no cost, and every word is the document’s own.</span><span data-l="zh">本地引擎的做法和早期的助手一样：取出问题里的关键词（中文靠一张小词表对应到英文），给当前文档的每句话打分，最高的一句做结论。这句话里带做法和截止日期时，它就变成一个清单步骤，日期标在旁边。不调模型，不花钱，每个字都是文档自己的。</span></p>
-          </div>
-          <div class="row">
-            <h3><span data-l="en">Evaluate your own checker</span><span data-l="zh">也要评测自己的核对器</span></h3>
-            <p><span data-l="en">Two early failures were our own bugs: the deadline check compared digits only and flagged a correct Chinese date, and a refusal quoting an injected “capacity 999” was marked as a failure.</span><span data-l="zh">最早的两个失败是我们自己的 bug：日期核对只比数字，把正确的中文日期标红；一次拒绝注入时提到“容量 999”，被判成失败。</span></p>
-          </div>
-          <div class="row">
-            <h3><span data-l="en">Accessibility is mostly subtraction</span><span data-l="zh">无障碍多半是做减法</span></h3>
-            <p><span data-l="en">One sentence, one checklist, fewer things on screen. Colours computed with the WCAG contrast formula; axe-core found 0 violations in both languages, light and dark, desktop and phone.</span><span data-l="zh">一句话、一份清单、屏幕上少放东西。颜色用 WCAG 对比度公式算出；axe-core 中英文、浅深色、电脑和手机都是 0 违规。</span></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="t-measured">
-      <div class="container">
-        <div class="head">
-          <h2 id="t-measured"><span data-l="en">Measured</span><span data-l="zh">实测</span></h2>
-          <p class="lead"><span data-l="en">Real model runs on 9 November 2026, on the demo questions.</span><span data-l="zh">2026 年 11 月 9 日的真实模型运行，用的是演示题。</span></p>
-        </div>
-        <table class="results">
-          <thead><tr><th scope="col"><span data-l="en">What</span><span data-l="zh">项目</span></th><th scope="col"><span data-l="en">Result</span><span data-l="zh">结果</span></th></tr></thead>
-          <tbody>
-            <tr><td><span data-l="en">Real model calls</span><span data-l="zh">真实模型调用</span></td><td><span data-l="en">214, all successful: 20 smoke-test calls, 72 questions typed into the app, 122 evaluation calls.</span><span data-l="zh">214 次，全部成功：20 次冒烟测试、72 次在应用里输入的问题、122 次评测调用。</span></td></tr>
-            <tr><td><span data-l="en">Quotes and deadlines that failed verification</span><span data-l="zh">核对失败的引文和截止日期</span></td><td><span data-l="en">0 across all 214 calls.</span><span data-l="zh">214 次调用中 0 条。</span></td></tr>
-            <tr><td><span data-l="en">Expected outcome matched (7 smoke cases)</span><span data-l="zh">预期结果匹配（7 个冒烟用例）</span></td><td>7 / 7</td></tr>
-            <tr><td><span data-l="en">Median and maximum response time</span><span data-l="zh">响应时间中位数和最大值</span></td><td><span data-l="en">3.4 s median, 10.6 s maximum</span><span data-l="zh">中位数 3.4 秒，最大 10.6 秒</span></td></tr>
-            <tr><td><span data-l="en">Total cost of all 214 calls</span><span data-l="zh">214 次调用总花费</span></td><td><span data-l="en">about US$0.13</span><span data-l="zh">约 0.13 美元</span></td></tr>
-            <tr><td><span data-l="en">Prompt comparison, 20 held-out questions</span><span data-l="zh">提示词对比，20 道留出题</span></td><td><span data-l="en">TraceDesk prompt 20 / 20, plain prompt 17 / 20 on all automatic checks; about 40% more tokens and 1.6 s slower per question.</span><span data-l="zh">TraceDesk 提示词 20/20，普通提示词 17/20 通过全部自动检查；每题多约 40% 的 token、慢约 1.6 秒。</span></td></tr>
-            <tr><td><span data-l="en">Local engine, 34 demo questions (10 November 2026)</span><span data-l="zh">本地引擎，34 道演示题（2026 年 11 月 10 日）</span></td><td><span data-l="en">Picked the right sentence for 29, asked back on 2 and said not covered on 3, with no model call.</span><span data-l="zh">29 道选对了原句，2 道反问，3 道答未覆盖，全程没有调用模型。</span></td></tr>
-            <tr><td><span data-l="en">Accessibility (axe-core 4.10)</span><span data-l="zh">无障碍（axe-core 4.10）</span></td><td><span data-l="en">0 violations on the cover, the help desk with an answer, and all five dashboard sections; both languages, light and dark, desktop and phone.</span><span data-l="zh">封面、带回答的帮助台、仪表盘五个板块均 0 违规；中英文、浅深色、电脑和手机。</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="section section--band" aria-labelledby="t-limits">
-      <div class="container">
-        <div class="head"><h2 id="t-limits"><span data-l="en">Limits</span><span data-l="zh">局限</span></h2></div>
-        <div class="rows rows--loose">
-          <div class="row">
-            <h3><span data-l="en">As of November 2026</span><span data-l="zh">截至 2026 年 11 月</span></h3>
-            <ul>
-              <li><span data-l="en">Not yet tested with readers; the design follows the W3C guidance on cognitive accessibility.</span><span data-l="zh">还没有请读者试用过；设计依据是 W3C 的认知无障碍指南。</span></li>
-              <li><span data-l="en">The quote check proves the text exists, not that it supports the sentence.</span><span data-l="zh">引文核对证明原文里有这句，不证明它支持结论。</span></li>
-              <li><span data-l="en">The local engine matches words, not meaning: it cannot combine two sections, and a phrasing its glossary does not know comes back as not covered.</span><span data-l="zh">本地引擎比对的是词，不是意思：它不会把两个章节合起来，词表里没有的说法会被答成未覆盖。</span></li>
-              <li><span data-l="en">The documents are four short fictional ones, and every figure on this page comes from them.</span><span data-l="zh">资料是四份简短的虚构文档，这一页的数字都来自它们。</span></li>
-              <li><span data-l="en">A local single-user prototype: no accounts, no public deployment, no dashboard login.</span><span data-l="zh">本地单用户原型：没有账号、没有公网部署、仪表盘没有登录。</span></li>
-            </ul>
-          </div>
-        </div>
-        <div class="case-links">
-          <a class="btn btn--accent" href="https://github.com/Jason-d-e/tracedesk-lite" rel="noreferrer"><span data-l="en">Read the code and README</span><span data-l="zh">看代码和 README</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-label="More work">
-      <div class="container prevnext">
-        <a class="clear" href="cairn.html"><span class="small"><span data-l="en">Previous</span><span data-l="zh">上一个</span></span><span class="index-name">Cairn</span></a>
-        <a class="clear" href="hub.html"><span class="small"><span data-l="en">Next</span><span data-l="zh">下一个</span></span><span class="index-name"><span data-l="en">Showcase knowledge hub</span><span data-l="zh">演示资料中心</span></span></a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <p class="small"><span data-l="en">© 2026 Liang Liyuan. Built with the Refract theme of the Hallmark design skill (MIT), set in Funnel Display and Funnel Sans (OFL) with Noto Sans SC for Chinese.</span><span data-l="zh">© 2026 Liang Liyuan。使用 Hallmark 设计 skill 的 Refract 主题（MIT），字体为 Funnel Display、Funnel Sans（OFL）和中文的 Noto Sans SC。</span></p>
-      </div>
-      <div class="footer-links">
-        <a href="https://github.com/Jason-d-e" rel="me noreferrer">GitHub</a>
-        <a href="https://github.com/Jason-d-e/Jason-d-e.github.io" rel="noreferrer"><span data-l="en">Source of this site</span><span data-l="zh">本站源码</span></a>
-      </div>
-    </div>
-  </footer>
-  <script src="site.js" defer></script>
+<p>This page has moved: <a href="/en/work/tracedesk/">TraceDesk Lite</a> · <a href="/work/tracedesk/" lang="zh-CN" hreflang="zh-CN">中文</a></p>
 </body>
 </html>
