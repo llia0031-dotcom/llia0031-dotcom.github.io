@@ -2,7 +2,7 @@
 
 Personal site of Liang Liyuan: https://jason-d-e.github.io/
 
-A portfolio of eight projects around one question: can every sentence an AI writes show its evidence? Chinese pages sit at the root, English pages under `/en/`.
+A portfolio of projects around one question: can every sentence an AI writes show its evidence? Chinese pages sit at the root, English pages under `/en/`.
 
 ## What is here
 
