@@ -2,19 +2,20 @@
 
 Personal site of Liang Liyuan: https://jason-d-e.github.io/
 
-Plain HTML, CSS and a little JavaScript, served by GitHub Pages. English first, Chinese on a switch.
+A portfolio of eight projects around one question: can every sentence an AI writes show its evidence? Chinese pages sit at the root, English pages under `/en/`.
 
-## Pages
+## What is here
 
-- `index.html`: who I am and the selected work.
-- `cairn.html`: Cairn, a bilingual WCAG 2.2 knowledge desk on retrieval (LaunchPad Hacks 2026).
-- `tracedesk.html`: TraceDesk Lite, an ADHD-friendly help desk with verified quotes (Ctrl+V Hackathon 2026).
+- `index.html`, `en/`: the home page, with the cover, the ring of projects, the method, the screens, the iteration log and a short About.
+- `work/<project>/`, `en/work/<project>/`: one page per project, with a one-minute summary, the evaluations and their numbers, the iterations and the limits.
+- `static/`, `media/`: the stylesheets, scripts, fonts, recordings and pictures those pages use.
+- `cairn.html`, `tracedesk.html`, `hub.html`, with `assets/`, `site.js` and `styles.css`: earlier case-study pages, kept so that existing links keep working.
 
-The home page also links to [Text on Product](https://jason-d-e.github.io/text-on-product/) ([source](https://github.com/Jason-d-e/text-on-product)), tips and a line by line checker for Chinese text on product images.
+This repository holds the built pages. The sentences and numbers on them are generated from each project's evaluation records, so a page never carries a number that was typed in by hand.
 
 ## Credits
 
-- Visual system: the "Refract" theme of the [Hallmark](https://github.com/hallmark-design/hallmark) design skill (MIT).
-- Fonts: Funnel Display and Funnel Sans (SIL Open Font License 1.1, Copyright 2024 The Funnel Project Authors), Noto Sans SC (OFL), loaded from Google Fonts.
-- The water light on the home page is a small WebGL shader written for the Cairn project.
-- Screenshots are of the two projects; the W3C text visible in them is quoted under the W3C Document License.
+- Built with [Astro](https://astro.build/) (MIT). [three.js](https://threejs.org/) (MIT) draws the cover, [Matter.js](https://brm.io/matter-js/) (MIT) moves the tags on the About screen, and the icons come from [IconPark](https://github.com/bytedance/IconPark) (Apache-2.0).
+- The pages that stack over one another follow the idea of Codrops' [StickySections](https://github.com/codrops/StickySections) (MIT), written anew for this site.
+- Fonts, loaded through Fontsource: Redaction and Redaction 50, Noto Serif SC, Noto Sans SC and Geist, all under the SIL Open Font License 1.1.
+- Earlier pages: the "Refract" theme of the [Hallmark](https://github.com/hallmark-design/hallmark) design skill (MIT); Funnel Display and Funnel Sans (SIL Open Font License 1.1, Copyright 2024 The Funnel Project Authors) and Noto Sans SC (OFL), loaded from Google Fonts.
